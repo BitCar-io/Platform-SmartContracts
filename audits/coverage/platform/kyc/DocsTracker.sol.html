@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for platform/kyc/DocsTracker.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">platform/kyc/</a> DocsTracker.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>34/34</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>5/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>34/34</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.24;
+&nbsp;
+import "../../libs/ownership/Ownable.sol";
+import "../../libs/ECVerify.sol";
+&nbsp;
+/**
+ * @title DocsTracker 
+ */
+contract DocsTracker is Ownable, ECVerify {
+&nbsp;
+    struct Document {
+        // the type of document
+        uint8 docType;
+        // if the signature has already been validated
+        bool validSignature;
+        // if the document was successfully submitted
+        bool submissionConfirmed;
+        // document hash
+        bytes32 digest;
+        // index of the document
+        uint256 idx;
+        // V component of the digital signature
+        uint8 v; 
+        // R component of the digital signature
+        bytes32 r;
+        // S component of the digital signature 
+        bytes32 s;
+    }
+    struct Repository {
+        //         hash =&gt; document
+        mapping(bytes32 =&gt; Document) doc;
+        //        index =&gt; hash
+        mapping(uint256 =&gt; bytes32) idx;
+        // document count
+        uint256 count;
+    }
+    mapping(address =&gt; Repository) private repo;
+&nbsp;
+    event DocumentSubmitted(address indexed _addr, bytes32 _hash);
+    event DocumentConfirmed(address indexed _addr, bytes32 _hash);
+&nbsp;
+    /**
+     * @notice Submitts document digest and signature
+     * param _docType The document type
+     * param _hash The hash of the document
+     * param _v Component V of the signature
+     * param _r Component R of the signature
+     * param _s Component S of the signature
+     */
+    function submitDocumentDigestAndSignature(
+        uint8 _docType, 
+        bytes32 _hash, 
+        uint8 _v, 
+        bytes32 _r, 
+        bytes32 _s) 
+            public 
+            returns (uint256) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(validateSignature(msg.sender, _hash, _v, _r, _s), "Sender address does not correspond to signature");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(repo[msg.sender].doc[_hash].validSignature == false, "The document has already been submitted");
+        repo[msg.sender].doc[_hash].docType = _docType;
+        repo[msg.sender].doc[_hash].validSignature = true;
+        repo[msg.sender].doc[_hash].digest = _hash;
+        repo[msg.sender].doc[_hash].idx = repo[msg.sender].count;
+        repo[msg.sender].doc[_hash].v = _v;
+        repo[msg.sender].doc[_hash].r = _r;
+        repo[msg.sender].doc[_hash].s = _s;
+        repo[msg.sender].idx[repo[msg.sender].count] = _hash;
+        repo[msg.sender].count = repo[msg.sender].count + 1;
+        emit DocumentSubmitted(msg.sender, _hash);
+        return repo[msg.sender].doc[_hash].idx;
+    }
+&nbsp;
+    /**
+     * @notice Confirms the document as successfully submitted
+     */
+    function confirmDocument(address _addr, bytes32 _hash) 
+            public 
+            onlyImmediateOwnerOrWhitelisted {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(repo[_addr].doc[_hash].validSignature, "Document signature must be validated first");
+        repo[_addr].doc[_hash].submissionConfirmed = true;
+        emit DocumentConfirmed(_addr, _hash);
+    }
+&nbsp;
+    /**
+     * @notice Gets the status of the submitted documents
+     * @param _addr The wallet that corresponds to the user submitting the documents
+     * @param _hash The hash (sha3) of the document
+     */
+    function getDocStatusByHash(address _addr, bytes32 _hash) 
+            public 
+            view 
+            returns (
+                uint8 _docType,
+                bool _validSignature,
+                bool _submissionConfirmed,
+                bytes32 _digest,
+                uint256 _idx,
+                uint8 _v,
+                bytes32 _r,
+                bytes32 _s) {
+        _docType = repo[_addr].doc[_hash].docType;
+        _validSignature = repo[_addr].doc[_hash].validSignature;
+        _submissionConfirmed = repo[_addr].doc[_hash].submissionConfirmed;
+        _digest = repo[_addr].doc[_hash].digest;
+        _idx = repo[_addr].doc[_hash].idx;
+        _v = repo[_addr].doc[_hash].v;
+        _r = repo[_addr].doc[_hash].r;
+        _s = repo[_addr].doc[_hash].s;
+    }
+&nbsp;
+    /**
+     * @notice Gets the status of the submitted documents
+     * @param _addr The wallet that corresponds to the user submitting the documents
+     * @param _idx The index of the document
+     */
+    function getDocStatusByIdx(address _addr, uint256 _idx) 
+            public 
+            view 
+            returns (
+                uint8 _docType,
+                bool _validSignature,
+                bool _submissionConfirmed,
+                bytes32 _digest,
+                uint256 _idx_r,
+                uint8 _v,
+                bytes32 _r,
+                bytes32 _s) {
+        bytes32 h = repo[_addr].idx[_idx];
+        _docType = repo[_addr].doc[h].docType;
+        _validSignature = repo[_addr].doc[h].validSignature;
+        _submissionConfirmed = repo[_addr].doc[h].submissionConfirmed;
+        _digest = repo[_addr].doc[h].digest;
+        _idx_r = repo[_addr].doc[h].idx;
+        _v = repo[_addr].doc[h].v;
+        _r = repo[_addr].doc[h].r;
+        _s = repo[_addr].doc[h].s;
+    }
+&nbsp;
+    /**
+     * @notice Returns the quantity of documents associated with an address
+     * @param _addr The address to obtain the count from
+     */
+    function getDocCount(address _addr) 
+            public 
+            view 
+            returns (uint256) {
+        return repo[_addr].count;
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

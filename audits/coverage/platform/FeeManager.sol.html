@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for platform/FeeManager.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">platform/</a> FeeManager.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>35/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>35/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.24;
+&nbsp;
+import "../platform/Registry.sol";
+&nbsp;
+import "../factories/ClaimerFactory.sol";
+import "./interfaces/IClaimer.sol";
+&nbsp;
+import "../factories/BEEFactory.sol";
+import "./interfaces/IBEE.sol";
+&nbsp;
+import "../factories/FeeFactory.sol";
+&nbsp;
+import "./Asset.sol";
+&nbsp;
+import "../governance/AccessControl.sol";
+&nbsp;
+contract FeeManager {
+    Registry internal config;
+&nbsp;
+    FeeFactory internal feeFactory;
+    ClaimerFactory internal claimerFactory;
+    BEEFactory internal beeFactory;
+&nbsp;
+    Asset internal asset;
+&nbsp;
+    struct Fees {
+        address fee;
+        uint256 amount;
+        bool created;
+    }
+&nbsp;
+    mapping(string =&gt; Fees) internal fees;
+&nbsp;
+    bool internal defaultFeesCreated = false;
+&nbsp;
+    event DefaultFeesCreated(uint256 feeBEE, uint256 feeMSI, uint256 feeBPF);
+&nbsp;
+    /**
+     * @notice Constructor
+     * @dev TODO: Validate arguments
+     * @param _config The Registry address
+     */
+    constructor(address _config, address _asset) public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_config != address(0));
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_asset != address(0));
+        
+        config = Registry(_config);
+&nbsp;
+        feeFactory = FeeFactory(config.getAddress("FeeFactory"));
+&nbsp;
+        claimerFactory = ClaimerFactory(config.getAddress("ClaimerFactory"));
+        beeFactory = BEEFactory(config.getAddress("BEEFactory"));
+&nbsp;
+        asset = Asset(_asset);
+    }
+&nbsp;
+    /**
+     * @notice Creates the default fee contracts
+     * @param _feeBEE BEE (former escrow) fee
+     * @param _feeMSI MSI fee
+     * @param _feeMSI Platform fee
+     */
+    function createDefaultFees(uint256 _feeBEE, uint256 _feeMSI, uint256 _feeBPF) public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(!defaultFeesCreated, "Default fees are already created");
+&nbsp;
+        AccessControl sudoAccCtrl = AccessControl(config.getAddress("Sudo"));
+        address platformOwner = sudoAccCtrl.getOwnerAddress();
+&nbsp;
+        createClaimer("CLAIMER", asset.getTokenAddress(), 0);
+        createBEE("BEE", asset.getTokenAddress(), _feeBEE);
+&nbsp;
+        createFee("MSI", asset.getAgent(), asset.getTokenAddress(), _feeMSI);
+        createFee("BPF", platformOwner, asset.getTokenAddress(), _feeBPF);
+&nbsp;
+        defaultFeesCreated = true;
+        emit DefaultFeesCreated(_feeBEE, _feeMSI, _feeBPF);
+    }
+    
+    /**
+     * @notice Creates a Claimer type fee
+     * @dev Validate amounts?
+     * @param _feeName Name of the fee
+     * @param _token Address of the AssetToken
+     * @param _amount Fee amount
+     */
+    function createClaimer(string _feeName, address _token, uint256 _amount) internal {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(!fees[_feeName].created, "Fee already exists");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_token != address(0), "Invalid token address");
+&nbsp;
+        fees[_feeName].fee = address(claimerFactory.create(_token));
+        fees[_feeName].amount = _amount;
+        fees[_feeName].created = true;
+    }
+&nbsp;
+    /**
+     * @notice Creates a BEE type fee
+     * @dev Validate amounts?
+     * @param _feeName Name of the fee
+     * @param _token Address of the AssetToken
+     * @param _amount Fee amount
+     */
+    function createBEE(string _feeName, address _token, uint256 _amount) internal {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(!fees[_feeName].created, "Fee already exists");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_token != address(0), "Invalid token address");
+&nbsp;
+        fees[_feeName].fee = beeFactory.create(_token, _amount);
+        fees[_feeName].amount = _amount;
+        fees[_feeName].created = true;
+    }
+&nbsp;
+    /**
+     * @notice Creates a general type fee
+     * @dev Validate amounts?
+     * @param _feeName Name of the fee
+     * @param _claimer Address of who can claim this fee
+     * @param _token Address of the AssetToken
+     * @param _amount Fee amount
+     */
+    function createFee(string _feeName, address _claimer, address _token, uint256 _amount) internal {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(!fees[_feeName].created, "Fee already exists");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_claimer != address(0), "Invalid claimer address");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_token != address(0), "Invalid token address");
+&nbsp;
+        fees[_feeName].fee = address(feeFactory.create(_claimer, _token));
+        fees[_feeName].amount = _amount;
+        fees[_feeName].created = true;
+    }
+&nbsp;
+    /**
+     * @notice Gets the address of the specified fee
+     * @param _feeName Name of the fee
+     * @return Address of the fee
+     */
+    function getAddress(string _feeName) public view returns(address) {
+        return fees[_feeName].fee;
+    }
+&nbsp;
+    /**
+     * @notice Gets the amount specified when the fee was created
+     * @param _feeName Name of the fee
+     * @return Amount of the fee
+     */
+    function getAmount(string _feeName) public view returns(uint256) {
+        return fees[_feeName].amount;
+    }
+&nbsp;
+    /**
+     * @notice Gets the default fees created flag
+     * @return true if default fees were created, false otherwise
+     */
+    function hasDefaultFees() public view returns(bool) {
+        return defaultFeesCreated;
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

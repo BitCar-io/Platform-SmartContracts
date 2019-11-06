@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for platform/TickerDecentralized.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">platform/</a> TickerDecentralized.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">23.08% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">12.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">8.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>6/28</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.24;
+import "../vendor/usingOraclize.sol";
+import "../vendor/SafeMath.sol";
+&nbsp;
+contract TickerDecentralized is usingOraclize {
+&nbsp;
+    using SafeMath for uint256;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    modifier onlyOwner(</span>) {
+<span class="cstat-no" title="statement not covered" >        require(msg.sender == owner, "Only the owner is allowed to call this function")</span>;
+        _;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    modifier isValidTicker(</span>) {
+<span class="cstat-no" title="statement not covered" >        require(value &gt; 0 &amp;&amp; lastQuery &gt; 0 &amp;&amp; lastQuery + minEpoch &gt;= now, "Invalid ticker")</span>;
+        _;
+    }
+&nbsp;
+    address private owner;
+    string private url;
+    uint256 private delay;
+    uint256 private lastQuery;
+    uint256 private value;
+    bool private enabled;
+    uint256 private decimals = 8;
+    uint256 private minEpoch = 5 * 60; // min epoch that is considered valid
+&nbsp;
+    event LogInfo(string description);
+&nbsp;
+    /**
+     * @notice Constructor
+     * @dev _url needs to be a valid "url" endpoint with the appropriate json
+     * query following the Oraclize standard, eg:
+     * json(https://api.coinbase.com/v2/prices/ETH-USD/spot).data.amount
+     * @param _url Ticker url
+     * @param _delay Delay in seconds. The endpoint will be queried every _delay seconds
+     * until the contract runs out of ETH
+     */
+    constructor(string _url, uint256 _delay) payable public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(bytes(_url).length &gt; 0, "Invalid url");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_delay &gt;= 60, "Delay needs to be at least 60 seconds");
+&nbsp;
+        owner = msg.sender;
+        url = _url;
+        delay = _delay;
+&nbsp;
+        // TODO: Remove in production
+        OAR = OraclizeAddrResolverI(0x6f485C8BF6fc43eA212E93BBF8ce046C7f1cb475);
+&nbsp;
+        //oraclize_setProof(proofType_TLSNotary | proofStorage_IPFS);
+    }
+&nbsp;
+    /**
+     * @notice Sets the current state of the contract
+     * @dev If "_state" is set to "true" the update method will trigger immediately
+     * @param _state State/Enabled flag
+     */
+<span class="fstat-no" title="function not covered" >    function setState(bool _state) onlyOwner publi</span>c {
+<span class="cstat-no" title="statement not covered" >        enabled = _state</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(enabled) {</span>
+<span class="cstat-no" title="statement not covered" >            update()</span>;
+        }
+    }
+&nbsp;
+    /**
+     * @notice Gets the last ticker
+     * @return The last value returned from the endpoint
+     */
+<span class="fstat-no" title="function not covered" >    function getTicker() public view isValidTicker returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return value;</span>
+    }
+&nbsp;
+    /**
+     * @notice Gets the last ticker timestamp
+     * @return The last query timestamp
+     */
+<span class="fstat-no" title="function not covered" >    function getLastQuery() public view returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return lastQuery;</span>
+    }
+&nbsp;
+    /**
+     * @notice Converts units into the smallest unit
+     * @return The units in the smallest denomination possible
+     */
+<span class="fstat-no" title="function not covered" >    function unitsToBase(uint256 _units) public view returns(uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return _units.mul(10 ** decimals);</span>
+    }
+    
+    /**
+     * @notice Converts units from the smallest denomination possible into the
+     * base unit
+     * @return Units converted to base unit
+     */
+<span class="fstat-no" title="function not covered" >    function baseToUnits(uint256 _units) public view returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return _units.div(10 ** decimals);</span>
+    }
+&nbsp;
+    /**
+     * @notice Converts units to USD
+     * @dev TODO: Remove, method added to ensure backwards compatibility
+     * @return Converted units in USD
+     */
+<span class="fstat-no" title="function not covered" >    function unitsToUSD(uint256 _units) public view returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return baseToUnits(_units.mul(value));</span>
+    }
+    
+    /**
+     * @notice Converts USD to units
+     * @dev TODO: Remove, method added to ensure backwards compatibility
+     * @return Converted USD to units
+     */
+<span class="fstat-no" title="function not covered" >    function usdToUnits(uint256 _usd) public view returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return unitsToBase(_usd).div(value);</span>
+    }
+&nbsp;
+    /**
+     * @notice Callback called from the Oraclize service
+     * @param id ID of the query
+     * @param result Result of the query
+     * @param proof TLS proof of the query
+     */
+<span class="fstat-no" title="function not covered" >    function __callback(bytes32 id, string result, bytes proof) publi</span>c {
+<span class="cstat-no" title="statement not covered" >        require(msg.sender == oraclize_cbAddress())</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        value = parseInt(result, decimals)</span>;
+<span class="cstat-no" title="statement not covered" >        lastQuery = block.timestamp</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if(enabled) {</span>
+<span class="cstat-no" title="statement not covered" >            update()</span>;
+        }
+    }
+&nbsp;
+    /**
+     * @notice Performs an oraclize query
+     * @dev TODO: Make this method internal?
+     */
+<span class="fstat-no" title="function not covered" >    function update() payable publi</span>c {
+        // Check if we have enough remaining funds
+<span class="cstat-no" title="statement not covered" >        if (oraclize_getPrice("URL") &gt; address(this).balance) {</span>
+<span class="cstat-no" title="statement not covered" >            emit LogInfo("Oraclize query was NOT sent, please add some ETH to cover for the query fee");</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >            emit LogInfo("Oraclize query was sent, standing by for the answer..");</span>
+&nbsp;
+            // Using XPath to to fetch the right element in the JSON response
+<span class="cstat-no" title="statement not covered" >            oraclize_query(delay, "URL", url)</span>;
+        }
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

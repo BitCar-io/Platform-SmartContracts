@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for libs/AssetRankParameters.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">libs/</a> AssetRankParameters.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.62% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>41/42</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">333×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">425×</span>
+<span class="cline-any cline-yes">425×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75×</span>
+<span class="cline-any cline-yes">75×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.24;
+&nbsp;
+import "../governance/Groups.sol";
+import "../governance/Multisignature.sol";
+import "./ownership/Ownable.sol";
+import "./AssetRank.sol";
+&nbsp;
+/**
+ * @title AssetRankParameter
+ */
+contract AssetRankParameters is Groups, Ownable, Multisignature {
+&nbsp;
+    /**
+     * @notice The Unit
+     */
+    uint256 internal theUnit = 1000000;
+&nbsp;
+    /**
+     * @notice Normalized variable (values ranging from 0 to 1 [0,1])
+     * that represents the boundary between 2 different
+     * classifications of the asset (Above or Below the threshold)
+     * Default Value: 0.5
+     */
+    uint256 internal theThreshold = 500000;
+&nbsp;
+    /**
+     * @notice Total number of parameters needed
+     */
+    uint8 internal numParams;
+&nbsp;
+    uint256[] internal weights;
+&nbsp;
+    uint256[] private newWeights;
+&nbsp;
+    /**
+     * @param _config References to AccessControl contracts 
+     */
+    constructor(address _config) 
+            public 
+            Groups (_config) {
+&nbsp;
+        numParams = 25;
+        for (uint q = 0; q &lt; numParams; q++) {addRankParameter(0);}
+&nbsp;
+        // MANDATORY FEATURES
+        weights[0] = theUnit;        // Manufacturer
+        weights[1] = theUnit;        // Chassis Number
+        weights[2] = theUnit;        // Number of Miles Driven
+        weights[3] = theUnit;        // Number of previous owners
+        weights[4] = theUnit;        // Has the car been in an accident
+        weights[5] = theUnit;        // Service history records
+        weights[6] = theUnit;        // Insurance records
+        weights[7] = theUnit;        // Original sales invoice
+        weights[8] = theUnit;        // Certificate of authenticity
+        weights[9] = theUnit;        // Mechanic report about the general state of the Exotic
+        weights[10] = theUnit;       // Have the tires been maintained
+        weights[11] = theUnit;       // Can the car be serviced locally
+&nbsp;
+        // OPTIONAL FEATURES
+        weights[12] = 5000;           // Manufacturer racing pedigree
+        weights[13] = 302500;         // Year of production, Price when New, Prive Now
+        weights[14] = 5000;           // Manual or Automatic
+        weights[15] = 5000;           // Original Accesories
+        weights[16] = 50000;          // Is the car a limited edition version?
+        weights[17] = 5000;           // Has the chassis or engine been signed by the individual who manufactured it
+        weights[18] = 5000;           // Does the car have a significant chassis number
+        weights[19] = 302500;         // Was the car driven or owned by a celebrity
+        weights[20] = 5000;           // Is it the original paint
+        weights[21] = 5000;           // V12, V10 or V8
+        weights[22] = 300000;         // Storage conditions of the car
+        weights[23] = 5000;           // Has the car been transported overseas via air/ship?
+        weights[24] = 5000;           // Has the car been transported locally via air/ship/train/truck?
+    }
+&nbsp;
+    /**
+     * @notice Obtains the current measure of The Unit
+     * @return The Unit
+     */
+    function getTheUnit() 
+            external 
+            view 
+            returns (uint256) {
+        return theUnit;
+    }
+&nbsp;
+    /**
+     * @notice Changes the threshold and by doing so, the criteria
+     * that defines how an asset is classified
+     * @param _epsilon The new Threshold
+     */
+<span class="fstat-no" title="function not covered" >    function setTheThreshold(uint256 _epsilon) </span>
+            external 
+            onlySudo {
+<span class="cstat-no" title="statement not covered" >        theThreshold = _epsilon</span>;
+    }
+&nbsp;
+    /**
+     * @notice Obtains the current threshold
+     * @return The Threshold
+     */
+    function getTheThreshold() 
+            external 
+            view 
+            returns (uint256) {
+        return theThreshold;
+    }
+&nbsp;
+    /**
+     * @notice Obtains the Total number of parameters needed
+     * @return The quantity of params for the Ranking algorithm
+     */
+    function getNumParams() 
+            external 
+            view 
+            returns (uint8) {
+        return numParams;
+    }
+&nbsp;
+    /**
+     * @notice Returns the duple (_weight, _value) given an index.
+     * @param _index the position in the parameters array
+     */
+    function getParam(uint8 _index) 
+            external 
+            view 
+            returns (uint256) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_index &lt; weights.length, "Index out of range");
+        return weights[_index];
+    }
+&nbsp;
+    /**
+     * @notice Private function that adds parameters to the Weights Array, it is only used by the constructor.
+     * @param _weight The specific weight for a particular variable of the Ranking Algorithm
+     * @return The size of the parameters collection
+     */
+    function addRankParameter(uint256 _weight) 
+            internal 
+            returns (uint256) {
+        weights.push(_weight);
+        return weights.length;
+    }
+&nbsp;
+    /**
+     * WEIGHTS UPDATE PROCESS
+     * @notice Request for updating the weights used in the ranking process
+     * @param _newWeights The new set of WEigthds for the ranking algorithm
+     * @return Transaction Id
+     */
+    function requestRankWeightsUpdate(uint256[] _newWeights) 
+            external 
+            onlySudo 
+            returns (uint256) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_newWeights.length == numParams, "Different quantity of weights than expected.");
+        newWeights = _newWeights;
+        return createMultisigTransaction(2, sudoAccCtrl.getRoleMembersCount());
+    }
+&nbsp;
+    /**
+     * WEIGHTS UPDATE PROCESS
+     * @notice Confirms the request for updating the weights used in the ranking process.
+     * @param _transactionId Transaction Id obtained in requestRankWeightsUpdate function
+     */
+    function confirmRankWeightsUpdate(uint256 _transactionId) 
+            external 
+            onlySudo {
+        uint8 signCount;
+        uint8 minSignCount;
+        (signCount, minSignCount) = signMultisigTransaction(_transactionId);
+        if (signCount &gt;= minSignCount) {
+            for (uint256 p = 0; p &lt; newWeights.length; p++) {
+                weights[p] = newWeights[p];
+            }
+        }
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,1316 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for platform/Asset.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">platform/</a> Asset.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.22% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>83/90</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55.68% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>49/88</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.47% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>17/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.71% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>89/96</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.24;
+&nbsp;
+import "../platform/Registry.sol";
+&nbsp;
+import "./Entity.sol";
+&nbsp;
+import "./Ranking.sol";
+&nbsp;
+&nbsp;
+import "../platform/Registry.sol";
+import "../token/Platform/IPlatformToken.sol";
+&nbsp;
+import "../factories/AssetTokenFactory.sol";
+import "../token/Asset/IAssetToken.sol";
+&nbsp;
+import "../factories/FeeManagerFactory.sol";
+import "./interfaces/IFeeManager.sol";
+&nbsp;
+import "../factories/AssetWhitelistFactory.sol";
+import "./interfaces/IAssetWhitelist.sol";
+&nbsp;
+import "../governance/Groups.sol";
+&nbsp;
+import "../vendor/SafeMath.sol";
+&nbsp;
+contract Asset is Entity, Ranking {
+&nbsp;
+    using SafeMath for uint256;
+&nbsp;
+    modifier onlyAgent() {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(msg.sender == agent, "Not a valid agent");
+        _;
+    }
+&nbsp;
+    Registry internal config;
+&nbsp;
+    AssetTokenFactory internal assetTokenFactory;
+&nbsp;
+    IPlatformToken internal platformToken;
+    IAssetToken internal assetToken;
+&nbsp;
+    FeeManagerFactory internal feeManagerFactory;
+    IFeeManager internal feeManager;
+&nbsp;
+    AssetWhitelistFactory internal assetWhitelistFactory;
+    IAssetWhitelist internal assetWhitelist;
+&nbsp;
+    ITicker internal ticker;
+&nbsp;
+    /* SETTINGS */
+    string public dataHash;
+&nbsp;
+    address internal owner;
+    address public agent;
+&nbsp;
+    uint256 public minTokenPercentage;
+    uint256 public tokenPercentage;
+    uint256 internal ethPercentage;
+&nbsp;
+    /* STATE */
+    uint256 internal PENDING_AGENT_DATA_APPROVAL = 0;
+    uint256 internal PENDING_ADMIN_DATA_APPROVAL = 1;
+    uint256 internal PENDING_AGENT_CONTRACT_APPROVAL = 2;
+    uint256 internal LIVE = 3;
+&nbsp;
+    uint256 public state = PENDING_AGENT_DATA_APPROVAL;
+    uint256 public agentRejections = 0;
+    uint256 public adminRejections = 0;
+    uint256 internal adminApprovalDelta;
+    uint256 internal agentApprovalEpoch;
+&nbsp;
+&nbsp;
+    event Log(string msg);
+    event LogInt(string msg, uint256 val);
+&nbsp;
+    event BoughtAssetTokens(address user, uint256 platformTokens, uint256 assetTokens);
+    event StateChanged(uint256 currentState);
+    event BitCarPercentChanged(uint256 bitCarPercent);
+&nbsp;
+    /**
+     * @notice Constructor
+     * @param _config The Registry address
+     * @param _agent Address of the user that wants to create a new asset
+     */
+    constructor(address _config, address _agent) 
+            public 
+            Entity(_config) Ranking(_config) {
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_config != address(0));
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_agent != address(0));
+&nbsp;
+        config = Registry(_config);
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(isVerifiedAgent(_agent), "Agent is not verified");
+&nbsp;
+        agent = _agent;
+&nbsp;
+        assetTokenFactory = AssetTokenFactory(config.getAddress("AssetTokenFactory"));
+&nbsp;
+        platformToken = IPlatformToken(config.getAddress("PlatformToken"));
+&nbsp;
+        feeManagerFactory = FeeManagerFactory(config.getAddress("FeeManagerFactory"));
+&nbsp;
+        ticker = ITicker(config.getAddress("Ticker"));
+&nbsp;
+        assetWhitelistFactory = AssetWhitelistFactory(config.getAddress("AssetWhitelistFactory"));
+    }
+&nbsp;
+    /* TOKEN */
+&nbsp;
+    // ASSET FUNCTIONS
+    /**
+     * @notice Creates a new token for this asset
+     * @dev TODO: This method is not safe!! A validation needs to happen before actually
+     *            making the newly created ERC20 live. The values entered are not validated
+     *          As per new onboarding changes Whitelist can be created multiple times
+     * @param _name Name of the token
+     * @param _symbol Symbol of the new asset token
+     * @param _totalSupply The total cost of the asset (in the smallest unit)
+     * @param _minOwnershipPercentage Minimum ownership required to own and therefore lock the asset
+     * @param _tradingPeriod Allowed trading duration period
+     * @param _votingPeriod Allowed voting duration period, after tradingPeriod is over (see waves: CyclicPausable.sol)
+     * @param _maxCycles Number of maximum cycles allow for the asset (see waves: CyclicPausable.sol)
+     */
+    function createAssetToken(
+        string _name, 
+        string _symbol, 
+        uint256 _totalSupply,
+        uint256 _minOwnershipPercentage, 
+        uint256 _tradingPeriod, 
+        uint256 _votingPeriod,
+        uint8 _maxCycles) 
+            public onlyAdmins {
+        
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == PENDING_ADMIN_DATA_APPROVAL, "Cannot create asset token in this state");
+&nbsp;
+        assetToken = assetTokenFactory.create(
+            address(this),
+            _name, 
+            _symbol, 
+            _totalSupply,
+            _minOwnershipPercentage, 
+            _tradingPeriod, 
+            _votingPeriod, 
+            _maxCycles);
+    }
+&nbsp;
+    /**
+     * @notice Creates a new fee manager for this asset
+     * @dev As per new onboarding changes Whitelist can be created multiple times
+     */
+    function createFeeManager() onlyAdmins public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == PENDING_ADMIN_DATA_APPROVAL, "Cannot create fee manager in this state");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(assetToken != address(0), "The AssetToken needs to be deployed before the whitelist");
+&nbsp;
+        feeManager = feeManagerFactory.create(address(this));
+    }
+&nbsp;
+    /**
+     * @notice Creates a new AssetWhitelist and attaches it to the AssetToken
+     * @dev As per new onboarding changes Whitelist can be created multiple times
+     */
+    function createWhitelist() onlyAdmins public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == PENDING_ADMIN_DATA_APPROVAL, "Cannot create whitelist in this state");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(assetToken != address(0), "The AssetToken needs to be deployed before the whitelist");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(feeManager.hasDefaultFees(), "The FeeManager needs to be deployed before the whitelist");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(feeManager != address(0), "The FeeManager needs to be deployed before the whitelist");
+&nbsp;
+        assetWhitelist = assetWhitelistFactory.create(address(this), feeManager.getAddress("CLAIMER"));
+        assetToken.setAssetWhitelist(assetWhitelist);
+    }
+&nbsp;
+    /**
+     * @notice Sets the minimum token percentage to be used with setPurchasePercentages
+     * @dev TODO: Need to test functionality
+     * @param _minTokenPercentage Token percentage
+     */
+<span class="fstat-no" title="function not covered" >    function setMinTokenPercentage(uint256 _minTokenPercentage) onlySudo publi</span>c {
+<span class="cstat-no" title="statement not covered" >        require(_minTokenPercentage &lt;= 100, "Invalid minimum token percentage")</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        minTokenPercentage = _minTokenPercentage</span>;
+    }
+&nbsp;
+    /**
+     * @notice Sets the Token/Eth percentage accepted as payment
+     * @dev Percentages need to add up to 100%
+     * @param _tokenPercentage Token percentage
+     * @param _ethPercentage Eth percentage
+     */
+    function setPurchasePercentages(uint256 _tokenPercentage, uint256 _ethPercentage) onlyAdmins public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == PENDING_ADMIN_DATA_APPROVAL, "Cannot change percentages in this state");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_tokenPercentage &lt;= 100 &amp;&amp; _tokenPercentage &gt;= minTokenPercentage, "Invalid token percentage");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_ethPercentage &lt;= 100, "Invalid Eth percentage");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_tokenPercentage.add(_ethPercentage) == 100, "Percentages need to add to 100%");
+&nbsp;
+        tokenPercentage = _tokenPercentage;
+        ethPercentage = _ethPercentage;
+&nbsp;
+        emit BitCarPercentChanged(_tokenPercentage);
+    }
+&nbsp;
+    /**
+     * @notice Calculates the required fee for a given amount based on what percentage the
+     *         amount corresponds to the total asset supply
+     * @dev TODO: Port to FeeManager
+     * @param _buyAmount The amount of asset tokens
+     * @return Fee cost (smallest unit)
+     */
+    function getFeeForAmount(uint256 _buyAmount, uint256 _fee) public view returns (uint256) {
+        return (_buyAmount.mul(_fee)).div(assetToken.totalSupply());
+    }
+&nbsp;
+     /**
+     * @notice Checks if the sender is allowed to purchase asset tokens
+     * @param _amount The amount of asset tokens
+     * @param _tokenAmount The correspondent amount of platform (BitCar) tokens
+     * @return true if user can purchase tokens, false otherwise
+     */
+    function canBuyAssetTokens(uint256 _amount, uint256 _tokenAmount) public view returns (bool) {
+        // Check if asset still has tokens available for purchase
+        <span class="missing-if-branch" title="if path not taken" >I</span>if ( assetToken.balanceOf(address(this)) &lt; _amount ) {
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+&nbsp;
+        // Check User BitCar ERC20 balance
+        <span class="missing-if-branch" title="if path not taken" >I</span>if ( platformToken.balanceOf(msg.sender) &lt; _tokenAmount ) {
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+&nbsp;
+        // Check User BitCar ERC20 allowance
+        <span class="missing-if-branch" title="if path not taken" >I</span>if ( platformToken.allowance(msg.sender, address(this)) &lt; _tokenAmount ) {
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+&nbsp;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if( tokenPercentage.add(ethPercentage) != 100 ) {
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+&nbsp;
+        return true;
+    }
+&nbsp;
+    /**
+     * @notice Performs an asset token purchase in exchange for platform tokens
+     * @dev     TODO: 
+     *               - Check if car exists, agent, validate params
+     *          DONE - Implement MSI
+     *          DONE - Check if user allowance is enough
+     *          DONE - Check if user wants to buy more tokens than available for purchase ("Asset" balance)
+     *          DONE - Convert BitCar tokens to smallest unit
+     *          DONE - Check user BitCar token balance before performing transaction
+     *          DONE - Check valid ticker price
+     *               - Check security around Asset transfer functions
+     *               - Validate Maths
+     *          DONE - Make sure that the Fees are created
+     *
+     *       Transfers Workflow: 
+     *             1 - BitcarTokens(User-&gt;Agent)
+     *             2 - BitcarTokens(User-&gt;FeeManager)
+     *             3 - CarTokens(Asset-&gt;User)
+     * @param _amount Total amount of asset tokens the user wants to purchase (smallest unit)
+     */
+    function buyAssetTokens(uint256 _amount) onlyTraders public payable {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == LIVE, "Purchases are not allowed");
+        require(agentApprovalEpoch + adminApprovalDelta &lt;= now, "Purchase time has not been reached");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(address(feeManager) != address(0));
+        
+        // Convert USD amount to BitCar tokens
+        uint256 tokenAmount = ticker.usdToUnits( _amount.mul(tokenPercentage).div(100) );
+        uint256 ethAmount = ticker.ethToUnits( _amount.mul(ethPercentage).div(100) ).mul(10**10); // Convert to Wei
+        
+        // Get fee cost based on USD amount
+        uint256 feeBEE = getFeeForAmount(_amount, ticker.usdToUnits(feeManager.getAmount("BEE")));
+        uint256 feeMSI = getFeeForAmount(_amount, ticker.usdToUnits(feeManager.getAmount("MSI")));
+        uint256 feeBPF = getFeeForAmount(_amount, ticker.usdToUnits(feeManager.getAmount("BPF")));
+&nbsp;
+        // Does sender have enough platform tokens to cover tokenPercentage+fees?
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(canBuyAssetTokens(_amount, tokenAmount.add(feeBEE).add(feeMSI).add(feeBPF)), "Conditions to buy tokens not met");
+&nbsp;
+        // Does sender sent enough eth to cover ethPercentage?
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(msg.value &gt;= ethAmount, "Not enough ETH was sent to cover this asset's cost");
+&nbsp;
+        // Transfer bitcar tokens from sender to "Agent"
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(platformToken.transferFrom(msg.sender, agent, tokenAmount), "Unsuccessful BitCar tokens transaction from User to Agent");
+&nbsp;
+        // Transfer ETH to the agent
+        agent.transfer(msg.value);
+        
+        // Transfer bitcar tokens from sender to Fee handlers
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(platformToken.transferFrom(msg.sender, feeManager.getAddress("BEE"), feeBEE), "Failed to transfer BitCar tokens to BEE");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(platformToken.transferFrom(msg.sender, feeManager.getAddress("BPF"), feeBPF), "Failed to transfer BitCar tokens to BPF");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(platformToken.transferFrom(msg.sender, feeManager.getAddress("MSI"), feeMSI), "Failed to transfer BitCar tokens to MSI");
+&nbsp;
+        // Transfer Car tokens from "Asset" to sender
+        // TODO: Sending gas with the transaction (agent.transfer), how to handle it?
+        require( assetToken.transfer(msg.sender, _amount), "Unsuccessful Asset tokens transaction from Asset to User");
+&nbsp;
+        emit BoughtAssetTokens(msg.sender, tokenAmount, _amount);
+&nbsp;
+        // emit LogInt("Amount: ", _amount);
+        // emit LogInt("TokenAmount: ", tokenAmount);
+&nbsp;
+        emit LogInt("feeBPF: ", feeBPF);
+        emit LogInt("feeMSI: ", feeMSI);
+        emit LogInt("feeBPF: ", feeBPF);
+    }
+&nbsp;
+    function setDataHash(string _hash) onlyAgent public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == PENDING_AGENT_DATA_APPROVAL, "Changing the data hash is not allowed for this state");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(bytes(_hash).length &gt; 0, "Invalid data hash");
+&nbsp;
+        dataHash = _hash;
+    }
+&nbsp;
+    /* APPROVAL */
+&nbsp;
+    /**
+     * @notice Agent approves that the data hash is correctly set.
+     * @dev Current state will be changed
+     */
+    function agentApproveData(string _optionalHash) onlyAgent public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == PENDING_AGENT_DATA_APPROVAL, "Changing the data hash is not allowed for this state");
+&nbsp;
+        if(bytes(_optionalHash).length &gt; 0) {
+            dataHash = _optionalHash;
+        }
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(bytes(dataHash).length &gt; 0, "Invalid data hash");
+&nbsp;
+        setState(PENDING_ADMIN_DATA_APPROVAL);
+    }
+&nbsp;
+    /**
+     * @notice Admin approves that the data hash is correctly set.
+     * @dev In case of an approval the admin needs to create token/fees/whitelist contracts first
+     *      FeeManager validation needs to happend here due to deployment costs
+     * @param _approved Approved flag
+     * @param _adminApprovalDelta After the agent approval purchases will be available after "delta" has passed
+     * @return false in case of rejection
+     */
+    function adminApproveData(bool _approved, uint256 _adminApprovalDelta) onlyAdmins public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == PENDING_ADMIN_DATA_APPROVAL, "Approval not allowed for this state");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_adminApprovalDelta &gt; 0, "Approval delta needs to be bigger 0");
+&nbsp;
+        if(!_approved) {
+            setState(PENDING_AGENT_DATA_APPROVAL);
+            adminRejections++;
+            return;
+        }
+&nbsp;
+        require(assetToken != address(0), "The AssetToken needs to be deployed before approving purchases");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(feeManager != address(0), "The FeeManager needs to be deployed before approving purchases");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(feeManager.hasDefaultFees(), "Default fees are not created for the FeeManager");
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(assetWhitelist != address(0), "AssetWhitelist needs to by deployed before approving purchases");
+&nbsp;
+        setState(PENDING_AGENT_CONTRACT_APPROVAL);
+        adminApprovalDelta = _adminApprovalDelta;
+    }
+&nbsp;
+    /**
+     * @notice Agent approves contracts created by admin.
+     * @param _approved Approved flag
+     * @return false in case of rejection
+     */
+    function approveContractCreation(bool _approved) onlyAgent public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(state == PENDING_AGENT_CONTRACT_APPROVAL, "Approval not allowed for this state");
+&nbsp;
+        if(!_approved) {
+            setState(PENDING_AGENT_DATA_APPROVAL);
+            agentRejections++;
+            return;
+        }
+&nbsp;
+        setState(LIVE);
+        agentApprovalEpoch = now;
+&nbsp;
+        assetToken.activate(adminApprovalDelta);
+    }
+&nbsp;
+    function setState(uint256 _state) internal {
+        state = _state;
+        emit StateChanged(_state);
+    }
+&nbsp;
+    /* GETTERS */
+&nbsp;
+    /**
+     * @notice Gets the asset token(ERC20) address
+     * @return ERC20 address
+     */
+    function getTokenAddress() public view returns (address) {
+        return address(assetToken);
+    }
+    
+    /**
+     * @notice Gets the FeeManager address for this asset
+     * @return FeeManager address
+     */
+    function getFeeManagerAddress() public view returns (address) {
+        return address(feeManager);
+    }
+    
+    /**
+     * @notice Gets the Agent address
+     * @return Agent address
+     */
+    function getAgent() public view returns (address) {
+        return agent;
+    }
+    
+    /**
+     * @notice Gets the Whitelist address for this asset
+     * @return Whitelist address
+     */
+<span class="fstat-no" title="function not covered" >    function getWhitelistAddress() public view returns (addres</span>s){
+<span class="cstat-no" title="statement not covered" >        return address(assetWhitelist);</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

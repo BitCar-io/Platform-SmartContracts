@@ -1,0 +1,130 @@
+image: node:10
+
+cache:
+  untracked: true
+  key: "$CI_COMMIT_REF_NAME"
+  paths:
+    - node_modules/
+
+stages:
+  - setup
+  - build
+  - test
+  - deploy
+  - publish
+  - version
+
+Setup:
+  stage: setup
+  tags:
+    - cicd
+  script:
+    - yarn install
+    - yarn list --depth=0
+  only:
+    - branches
+
+Build:
+  stage: build
+  tags:
+    - cicd
+  script:
+    - echo -e "\e[32mBuilding contracts\e[39m"
+    - rm -rf build
+    - yarn run build
+  artifacts:
+    name: "${CI_JOB_ID}-Compile"
+    paths:
+      - build/contracts/
+    expire_in: 2 hrs    
+  only:
+    - branches
+
+Test:
+  stage: test
+  tags:
+    - cicd
+  script:
+    - echo "Running tests"
+    - yarn run test
+  dependencies:
+    - Build
+  only:
+    - mainnet
+
+Deploy:
+  stage: deploy
+  tags:
+    - cicd
+  script:
+    - chmod +x ./scripts/deployment/infura-test.sh
+    - ./scripts/deployment/infura-test.sh ${CI_COMMIT_REF_NAME} "https://${CI_COMMIT_REF_NAME}${INFURA_BASE_URL}${INFURA_API_KEY}"
+    - echo -e "\e[32mMigrating to ${CI_COMMIT_REF_NAME} server blockchain\e[39m"
+    # - echo -e "\e[32mPausing Ticker server\e[39m"
+    # - curl -i -X GET http://192.168.1.118:8082/pause?by=Job${CI_JOB_TOKEN}
+    - echo -e "\e[32mMigrating contracts\e[39m"
+    - ./node_modules/.bin/truffle migrate --network ${CI_COMMIT_REF_NAME} --reset
+    # - yarn run deploy
+    # - echo -e "\e[32mUnpausing Ticker server\e[39m"
+    # - curl -i -X GET http://192.168.1.118:8082/unpause
+  artifacts:
+    name: "${CI_JOB_ID}-Deployed"
+    paths:
+      - build/contracts/
+  environment:
+    name: "backend-$CI_COMMIT_REF_NAME"
+  only:
+    - mainnet
+    - rinkeby
+    - ropsten
+    - staging
+    - development
+  dependencies:
+    - Build
+
+Publish Frontend Contracts:
+  stage: publish
+  tags:
+    - cicd
+  script:
+    - echo -e "\e[32mGenerating contract Json files for use by frontend\e[39m"
+    - yarn run create-frontend-files
+    - yarn run push-contracts-bucket
+  artifacts:
+    name: "backend-$CI_COMMIT_REF_NAME"
+    paths:
+      - build/frontendcontracts/
+  environment:
+    name: "backend-$CI_COMMIT_REF_NAME"
+  only:
+    - mainnet
+    - rinkeby
+    - ropsten
+    - staging
+    - development
+  dependencies:
+    - Deploy
+
+Version:
+  image: python:3.7-stretch
+  stage: version
+  tags:
+    - cicd
+  script:
+    - mkdir -p ~/.ssh && chmod 700 ~/.ssh
+    - ssh-keyscan 192.168.1.100 >> ~/.ssh/known_hosts && chmod 644 ~/.ssh/known_hosts
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - pip install semver
+    - python ./scripts/deployment/gen-semver.py > version
+  artifacts:
+    paths:
+      - version
+  only:
+    - mainnet
+    - rinkeby
+    - ropsten
+    - staging
+    - development
+  dependencies:
+    - Deploy

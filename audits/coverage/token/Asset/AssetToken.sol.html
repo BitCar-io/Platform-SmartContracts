@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for token/Asset/AssetToken.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">token/Asset/</a> AssetToken.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>18/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/25</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.24;
+&nbsp;
+import "./BaseAssetToken.sol";
+&nbsp;
+contract AssetToken is BaseAssetToken {
+&nbsp;
+    struct Ballot {
+        uint256 sellTheAssetCount;
+        uint256 sellCycle;
+        uint256 keepTheAssetCount;
+        uint256 keepCycle;
+        uint256 minOwnershipPercentage;
+        mapping (address =&gt; uint256) votersAndCycles;
+    }
+    Ballot private assetBallot;
+&nbsp;
+    event SellTheAssetVote(address indexed _voter, uint256 _cycle);
+    event KeepTheAssetVote(address indexed _voter, uint256 _cycle);
+    event StartAssetAuction(uint256 _cycle, uint256 _minOwnership, uint256 _sellCount, uint256 _keepCount);
+&nbsp;
+    /**
+     * @dev Checks if msg.sender is a token holder and if it has already voted.
+     */
+    modifier onlyTokenHolders() {
+        bool isTokenHolder = balances[msg.sender] &gt; 0;
+        bool firstVoteAttempt = assetBallot.votersAndCycles[msg.sender] != getCycle();
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(isTokenHolder &amp;&amp; firstVoteAttempt, "Is not a Token Holders or it has already voted.");
+        _;
+    }
+&nbsp;
+    //// Public functions ////
+    /**
+     * @dev TOOD: Check security around "owner"
+     * @param _owner The owner of the contract (Will have initial total supply)
+     * @param _name The name given to the token
+     * @param _symbol The symbol given to the token
+     * @param _totalTokens The total amount of tokens issued
+     * @param _minOwnershipPercentage The minimum quorum
+     * @param _tradingPeriod The period (in seconds) that trading will be allowed
+     * @param _votingPeriod The period (in seconds) that voting will be allowed
+     * @param _maxCycles Number of maximum cycles allow for the asset (see waves: CyclicPausable.sol)
+     * @param _config From Groups contract. References to AccessControl contracts.
+     */
+    constructor(
+        address _owner,
+        string _name, 
+        string _symbol, 
+        uint256 _totalTokens, 
+        uint256 _minOwnershipPercentage, 
+        uint256 _tradingPeriod, 
+        uint256 _votingPeriod, 
+        uint8 _maxCycles,
+        address _config) 
+            public 
+            BaseAssetToken(
+                _owner,
+                _name, 
+                _symbol, 
+                _totalTokens, 
+                _minOwnershipPercentage, 
+                _tradingPeriod, 
+                _votingPeriod, 
+                _maxCycles,
+                _config) {
+        assetBallot.sellTheAssetCount = 0;
+        assetBallot.sellCycle = 0;
+        assetBallot.keepTheAssetCount = 0;
+        assetBallot.keepCycle = 0;
+        assetBallot.minOwnershipPercentage = _minOwnershipPercentage.mul(totalSupply()).div(100);
+    }
+&nbsp;
+    /**
+     * @notice The balance of msg.sender is counted as Selling the Asset Vote.
+     */
+    function voteForSellingTheAsset() 
+            public 
+            onlyTokenHolders
+            whenNotPaused
+            whileIsInLowerWave
+            isNotLastCycle {
+        if (assetBallot.sellCycle != getCycle()) {
+            assetBallot.sellTheAssetCount = 0;
+            assetBallot.sellCycle = getCycle();
+        }
+        assetBallot.sellTheAssetCount += balances[msg.sender];
+        assetBallot.votersAndCycles[msg.sender] = assetBallot.sellCycle;
+        emit SellTheAssetVote(msg.sender, assetBallot.sellCycle);
+&nbsp;
+        // Contract is Paused because token holders decided to sell the asset
+        if (assetBallot.sellTheAssetCount &gt;= assetBallot.minOwnershipPercentage) {
+            paused = true;  // Using Pausable contract capabilities
+            claimsEnabled = true;
+            emit StartAssetAuction(
+                assetBallot.sellCycle, 
+                assetBallot.minOwnershipPercentage, 
+                assetBallot.sellTheAssetCount, 
+                assetBallot.keepTheAssetCount
+            );
+        }
+    }
+&nbsp;
+    /**
+     * @notice The balance of msg.sender is counted as Keeping the Asset Vote.
+     */
+<span class="fstat-no" title="function not covered" >    function voteForKeepingTheAsset() </span>
+            public 
+            onlyTokenHolders
+            whenNotPaused
+            whileIsInLowerWave
+            isNotLastCycle {
+<span class="cstat-no" title="statement not covered" >        if (assetBallot.keepCycle != getCycle()) {</span>
+<span class="cstat-no" title="statement not covered" >            assetBallot.keepTheAssetCount = 0</span>;
+<span class="cstat-no" title="statement not covered" >            assetBallot.keepCycle = getCycle()</span>;
+        }
+<span class="cstat-no" title="statement not covered" >        assetBallot.keepTheAssetCount += balances[msg.sender]</span>;
+<span class="cstat-no" title="statement not covered" >        assetBallot.votersAndCycles[msg.sender] = assetBallot.keepCycle</span>;
+<span class="cstat-no" title="statement not covered" >        emit KeepTheAssetVote(msg.sender, assetBallot.keepCycle);</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for platform/BEE.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">platform/</a> BEE.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.65% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>22/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.5% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>10/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.15% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>25/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.24;
+&nbsp;
+import "./Registry.sol";
+import "../token/Platform/IPlatformToken.sol";
+import "../token/Asset/IAssetToken.sol";
+&nbsp;
+import "../vendor/SafeMath.sol";
+&nbsp;
+import "./interfaces/IFee.sol";
+&nbsp;
+contract BEE is IFee {
+    Registry config;
+    IPlatformToken platformToken;
+    IAssetToken assetToken;
+&nbsp;
+    using SafeMath for uint256;
+&nbsp;
+    /// MODIFIERS ///
+    /**
+     * @notice Are claims enabled for the associated asset token
+     */
+    modifier assetClaimsEnabled() {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(assetToken.canClaim(), "Claims are disabled for this Asset Token");
+        _;
+    }
+&nbsp;
+    /**
+     * @notice Checks if an user can still claim tokens
+     */
+    modifier canSenderClaim() {
+        require(assetToken.balanceOf(msg.sender) &gt; claimers[msg.sender], "User already claimed all asset tokens");
+        _;
+    }
+&nbsp;
+    /// EVENTS ///
+    /**
+     * @notice Event that logs successful claims
+     */
+    event Claimed(address _address, uint256 _amountPlatformTokens, uint256 _amountAssetTokens);
+&nbsp;
+    // Total cost
+    uint256 totalFee;
+&nbsp;
+    uint256 ratio = 0; // BCT -&gt; CT ratio
+&nbsp;
+    /**
+     * @notice Stores successful claims
+     */
+    mapping(address =&gt; uint256) claimers;
+&nbsp;
+    constructor(address _config, address _assetTokenAddress, uint256 _totalFee) public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_config != address(0));
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_assetTokenAddress != address(0));
+        
+        config = Registry(_config);
+        platformToken = IPlatformToken(config.getAddress("PlatformToken"));
+        assetToken = IAssetToken(_assetTokenAddress);
+&nbsp;
+        totalFee = _totalFee;
+    }
+&nbsp;
+    // TODO: Check security around this method
+    function getRatio() public returns (uint256) {
+        if(ratio &gt; 0) {
+            return ratio;
+        }
+&nbsp;
+        uint256 assetTokensSold = assetToken.totalSupply().sub(assetToken.balanceOf(assetToken.getOwner())); // totalSupply - unsoldTokens
+        uint256 escrowFullBalance = getPlatformTokenBalance().mul(100); // More resolution
+&nbsp;
+        ratio = escrowFullBalance.div(assetTokensSold);
+&nbsp;
+        return ratio;
+    }
+&nbsp;
+    function assetTokensToPlatformTokens(uint256 _amount) public returns (uint256) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(getRatio() &gt; 0, "Ratio needs to be bigger than 0");
+        return (_amount.mul(getRatio())).div(100); // Get rid of resolution
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function claimEth() publi</span>c {
+    }
+&nbsp;
+    /**
+     * @notice Amount of car tokens to claim and receive bitcar tokens in return
+     */
+    function claimPlatformTokens() public assetClaimsEnabled canSenderClaim {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(assetToken.balanceOf(msg.sender) &gt; 0, "Sender does not have any tokens");
+&nbsp;
+        // Asset token user balance
+        uint256 userAssetBalance = assetToken.balanceOf(msg.sender);
+        uint256 platformTokens = assetTokensToPlatformTokens(userAssetBalance);
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(platformToken.transfer(msg.sender, platformTokens), "Could not transfer tokens to user");
+&nbsp;
+        claimers[msg.sender].add(userAssetBalance);
+&nbsp;
+        emit Claimed(msg.sender, platformTokens, userAssetBalance);
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function claimAssetTokens() publi</span>c {
+    }
+&nbsp;
+    function getPlatformTokenBalance() public view returns (uint256) {
+        return platformToken.balanceOf(address(this));
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getAssetTokenBalance() public view returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return assetToken.balanceOf(address(this));</span>
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

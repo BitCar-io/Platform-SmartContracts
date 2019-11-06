@@ -1,0 +1,59 @@
+{
+  "name": "bitcar-backend",
+  "version": "1.0.0",
+  "description": "> TODO",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/truffle compile",
+    "test": "./node_modules/.bin/run-with-testrpc --port 8545 './node_modules/.bin/truffle --network local test test/*'",
+    "unit-test:asset-approval": "./node_modules/.bin/run-with-testrpc --port 8545 './node_modules/.bin/truffle --network development test test/unit-tests/asset-approval.js'",
+    "unit-test:asset-claim": "./node_modules/.bin/run-with-testrpc --port 8545 './node_modules/.bin/truffle --network development test test/unit-tests/asset-claim.js'",
+    "unit-test:asset-escrow": "./node_modules/.bin/run-with-testrpc --port 8545 './node_modules/.bin/truffle --network development test test/unit-tests/asset-escrow.js'",
+    "unit-test:asset-purchases": "./node_modules/.bin/run-with-testrpc --port 8545 './node_modules/.bin/truffle --network development test test/unit-tests/asset-purchases.js'",
+    "unit-test:asset-whitelist": "./node_modules/.bin/run-with-testrpc --port 8545 './node_modules/.bin/truffle --network development test test/unit-tests/asset-whitelist.js'",
+    "docgen": "truffle compile && solidoc ./ ./docs",
+    "migrate-production": "TICKER_EPOCH_MINUTES=5 ./node_modules/.bin/truffle migrate --network devnet --reset",
+    "migrate-staging": "TICKER_EPOCH_MINUTES=1440 HDWALLET_UNLOCKACCOUNTS=21 ./node_modules/.bin/truffle migrate --network devnet --reset",
+    "migrate-development": "TICKER_EPOCH_MINUTES=1440 ./node_modules/.bin/truffle migrate --network development --reset",
+    "migrate-dev-hdtest": "TICKER_EPOCH_MINUTES=1440 HDWALLET_UNLOCKACCOUNTS=21 ./node_modules/.bin/truffle migrate --network devHDProvider --reset",
+    "migrate-frontend-local": "REDEPLOY_PLATFORM_TOKEN=true TICKER_EPOCH_MINUTES=180000 ./node_modules/.bin/truffle migrate --network local_frontend --reset",
+    "create-frontend-files": "node ./scripts/deployment/generate-frontend-contracts.js",
+    "create-frontend-files-local": "FRONTENDCONTRACTPATH='../../../Frontend/build/contracts' yarn run create-frontend-files",
+    "push-contracts-bucket": "node ./scripts/deployment/push-contracts-bucket.js",
+    "surya-report": "./node_modules/surya/bin/surya mdreport ./audits/surya_report_$(date \"+%Y_%m_%d\").md ./contracts/**/*.sol"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.1.100/BitCar/Platform/Backend.git" 
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "any-promise": "1.3.0",
+    "bignumber.js": "8.0.1",
+    "bunyan": "1.8.12",
+    "bunyan-format": "0.2.1",
+    "chalk": "2.4.1",
+    "dotenv": "6.2.0",
+    "solidoc": "1.0.5",
+    "solium": "1.2.1",
+    "solium-plugin-security": "0.1.1",
+    "truffle": "5.0.3",
+    "truffle-assertions": "0.7.2",
+    "truffle-hdwallet-provider": "^1.0.5",
+    "web3-provider-engine": "14.1.0"
+  },
+  "devDependencies": {
+    "console.table": "^0.10.0",
+    "eth-gas-reporter": "*",
+    "ethlint": "^1.2.2",
+    "minio": "^7.0.8",
+    "run-with-testrpc": "^0.3.0",
+    "solidity-coverage": "^0.5.11",
+    "solidoc": "*",
+    "surya": "0.2.10"
+  }
+}

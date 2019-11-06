@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lifecycle/AssetBallot.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">lifecycle/</a> AssetBallot.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">pragma solidity ^0.4.24;
+&nbsp;
+import "../lifecycle/CyclicPausable.sol";
+import "../vendor/SafeMath.sol";
+import "../token/Asset/AssetToken.sol";
+&nbsp;
+/**
+ * @title AssetBallot 
+ */
+contract AssetBallot is CyclicPausable {
+&nbsp;
+    using SafeMath for uint256;
+&nbsp;
+    /**
+     * @notice Data structure for storing ballot information.
+     */
+    struct Ballot {
+        uint256 sellAssetCount;
+        uint256 sellCycle;
+        uint256 keepAssetCount;
+        uint256 keepCycle;
+        uint256 minOwnershipPercentage;
+        mapping (address =&gt; uint256) votersAndCycles;
+    }
+    Ballot private assetBallot;
+&nbsp;
+    event SellAssetVote(address indexed _voter, uint256 _cycle);
+    event KeepAssetVote(address indexed _voter, uint256 _cycle);
+    event StartAssetAuction(address indexed _asset, uint256 _cycle, uint256 _minOwnership, uint256 _sellCount, uint256 _keepCount);
+&nbsp;
+    /**
+     * @notice The ERC20 Token
+     */
+    AssetToken private assetToken;
+&nbsp;
+    /**
+     * @notice Checks if msg.sender is a token holder and if it has already voted.
+     */
+<span class="fstat-no" title="function not covered" >    modifier onlyTokenHolders(</span>) {
+<span class="cstat-no" title="statement not covered" >        bool isTokenHolder = assetToken.balanceOf(msg.sender) &gt; 0</span>;
+<span class="cstat-no" title="statement not covered" >        bool firstVoteAttempt = assetBallot.votersAndCycles[msg.sender] != getCycle()</span>;
+<span class="cstat-no" title="statement not covered" >        require(isTokenHolder &amp;&amp; firstVoteAttempt, "Is not a Token Holders or it has already voted.")</span>;
+        _;
+    }
+&nbsp;
+    /**
+     * @param _minOwnershipPercentage The minimum quorum
+     * @param _tradingPeriod The period (in seconds) that trading will be allowed
+     * @param _votingPeriod The period (in seconds) that voting will be allowed
+     * @param _maxCycles Number of maximum cycles allow for the asset (see waves: CyclicPausable.sol)
+     * @param _assetToken Reference to the corresponding AssetToken.
+     * @param _config From Groups contract. References to AccessControl contracts.
+     */
+<span class="fstat-no" title="function not covered" >    constructor(</span>
+        uint256 _minOwnershipPercentage, 
+        uint256 _tradingPeriod, 
+        uint256 _votingPeriod, 
+        uint8 _maxCycles,
+        address _assetToken,
+        address _config) 
+            public 
+            CyclicPausable(
+                _tradingPeriod, 
+                _votingPeriod, 
+                _maxCycles, 
+                _config) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        require(_minOwnershipPercentage &lt;= 100, "Invalid minimum ownership percentage")</span>;
+<span class="cstat-no" title="statement not covered" >        require(_tradingPeriod &gt;= 1 days, "Invalid trading period")</span>;
+<span class="cstat-no" title="statement not covered" >        require(_votingPeriod &gt;= 1 days, "Invalid voting period")</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        assetToken = AssetToken(_assetToken)</span>;
+<span class="cstat-no" title="statement not covered" >        assetBallot.sellAssetCount = 0</span>;
+<span class="cstat-no" title="statement not covered" >        assetBallot.sellCycle = 0</span>;
+<span class="cstat-no" title="statement not covered" >        assetBallot.keepAssetCount = 0</span>;
+<span class="cstat-no" title="statement not covered" >        assetBallot.keepCycle = 0</span>;
+<span class="cstat-no" title="statement not covered" >        assetBallot.minOwnershipPercentage = _minOwnershipPercentage.mul(assetToken.totalSupply()).div(100)</span>;
+    }
+&nbsp;
+    /**
+     * @notice The balance of msg.sender is counted as Selling the Car Vote.
+     */
+<span class="fstat-no" title="function not covered" >    function sellAssetVote() </span>
+            public 
+            onlyTokenHolders
+            whenNotPaused
+            whileIsInLowerWave
+            isNotLastCycle {
+<span class="cstat-no" title="statement not covered" >        if (assetBallot.sellCycle != getCycle()) {</span>
+<span class="cstat-no" title="statement not covered" >            assetBallot.sellAssetCount = 0</span>;
+<span class="cstat-no" title="statement not covered" >            assetBallot.sellCycle = getCycle()</span>;
+        }
+<span class="cstat-no" title="statement not covered" >        assetBallot.sellAssetCount += assetToken.balanceOf(msg.sender)</span>;
+<span class="cstat-no" title="statement not covered" >        assetBallot.votersAndCycles[msg.sender] = assetBallot.sellCycle</span>;
+<span class="cstat-no" title="statement not covered" >        emit SellAssetVote(msg.sender, assetBallot.sellCycle);</span>
+&nbsp;
+        // Contract is Paused because token holders decided to sell the asset
+<span class="cstat-no" title="statement not covered" >        if (assetBallot.sellAssetCount &gt;= assetBallot.minOwnershipPercentage) {</span>
+<span class="cstat-no" title="statement not covered" >            paused = true</span>;  // Using Pausable contract capabilities
+            //assetToken.stopTrading();
+<span class="cstat-no" title="statement not covered" >            emit StartAssetAuction(</span>
+                address(assetToken),
+                assetBallot.sellCycle, 
+                assetBallot.minOwnershipPercentage, 
+                assetBallot.sellAssetCount, 
+                assetBallot.keepAssetCount
+            );
+        }
+    }
+&nbsp;
+    /**
+     * @notice The balance of msg.sender is counted as Keeping the Car Vote.
+     */
+<span class="fstat-no" title="function not covered" >    function keepAssetVote() </span>
+            public 
+            onlyTokenHolders
+            whenNotPaused
+            whileIsInLowerWave
+            isNotLastCycle {
+<span class="cstat-no" title="statement not covered" >        if (assetBallot.keepCycle != getCycle()) {</span>
+<span class="cstat-no" title="statement not covered" >            assetBallot.keepAssetCount = 0</span>;
+<span class="cstat-no" title="statement not covered" >            assetBallot.keepCycle = getCycle()</span>;
+        }
+<span class="cstat-no" title="statement not covered" >        assetBallot.keepAssetCount += assetToken.balanceOf(msg.sender)</span>;
+<span class="cstat-no" title="statement not covered" >        assetBallot.votersAndCycles[msg.sender] = assetBallot.keepCycle</span>;
+<span class="cstat-no" title="statement not covered" >        emit KeepAssetVote(msg.sender, assetBallot.keepCycle);</span>
+    }
+&nbsp;
+    /**
+     * @notice Gets the duration of the Trading Period in seconds
+     */
+<span class="fstat-no" title="function not covered" >    function getTradingPeriodDuration() </span>
+            public 
+            view 
+            returns (uint256) {
+<span class="cstat-no" title="statement not covered" >        return upperWave;</span>
+    }
+&nbsp;
+    /**
+     * @notice Gets the duration of the Voting Period in seconds
+     */
+<span class="fstat-no" title="function not covered" >    function getVotingPeriodDuration() </span>
+            public 
+            view 
+            returns (uint256) {
+<span class="cstat-no" title="statement not covered" >        return lowerWave;</span>
+    }
+&nbsp;
+    /**
+     * @notice Gets the duration of the Voting Period in seconds
+     */
+<span class="fstat-no" title="function not covered" >    function isInTradingPeriod() </span>
+            public 
+            view 
+            returns (bool) {
+<span class="cstat-no" title="statement not covered" >        return isInUpperWave();</span>
+    }
+&nbsp;
+    /**
+     * @notice Returns the reference to the corresponding AssetToken.
+     */
+<span class="fstat-no" title="function not covered" >    function getAssetToken() </span>
+            public 
+            view 
+            returns (address) {
+<span class="cstat-no" title="statement not covered" >        return address(assetToken);</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

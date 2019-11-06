@@ -1,0 +1,977 @@
+[4m
+contracts/Migrations.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                       [3mlinebreak-style[23m
+[1m  3:0  [22m    [33mwarning  [39m  Contract 'Migrations' must be preceded by 2 blank lines.            [3mblank-lines[23m
+[1m  5:4  [22m    [33mwarning  [39m  'last_completed_migration' doesn't follow the mixedCase notation    [3mmixedcase[23m
+[1m  8:33  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.        [3mlbrace[23m
+[1m  19:21  [22m  [33mwarning  [39m  'new_address' doesn't follow the mixedCase notation                 [3mmixedcase[23m
+[4m
+contracts/factories/AbstractFactory.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                    [3mlinebreak-style[23m
+[1m  5:0  [22m    [33mwarning  [39m  Contract 'AbstractFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  30:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.     [3mlbrace[23m
+[1m  41:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.     [3mlbrace[23m
+[4m
+contracts/factories/AssetFactory.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                                 [3mlinebreak-style[23m
+[1m  7:0  [22m  [33mwarning  [39m  Contract 'AssetFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/factories/AssetRankFactory.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                     [3mlinebreak-style[23m
+[1m  8:0  [22m    [33mwarning  [39m  Contract 'AssetRankFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  26:33  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.      [3mlbrace[23m
+[4m
+contracts/factories/AssetTokenFactory.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                      [3mlinebreak-style[23m
+[1m  8:0  [22m    [33mwarning  [39m  Contract 'AssetTokenFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  32:34  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.       [3mlbrace[23m
+[4m
+contracts/factories/AssetWhitelistFactory.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                                          [3mlinebreak-style[23m
+[1m  8:0  [22m  [33mwarning  [39m  Contract 'AssetWhitelistFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/factories/BEEFactory.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                               [3mlinebreak-style[23m
+[1m  8:0  [22m  [33mwarning  [39m  Contract 'BEEFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/factories/ClaimerFactory.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                                   [3mlinebreak-style[23m
+[1m  8:0  [22m  [33mwarning  [39m  Contract 'ClaimerFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/factories/FeeFactory.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                               [3mlinebreak-style[23m
+[1m  8:0  [22m  [33mwarning  [39m  Contract 'FeeFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/factories/FeeManagerFactory.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                                      [3mlinebreak-style[23m
+[1m  8:0  [22m  [33mwarning  [39m  Contract 'FeeManagerFactory' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/governance/AccessControl.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  12:0  [22m    [33mwarning  [39m  Contract 'AccessControl' must be preceded by 2 blank lines.                                 [3mblank-lines[23m
+[1m  87:17  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  100:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  109:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  112:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  121:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  130:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  138:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  141:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  150:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  159:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  167:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  170:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  178:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  181:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[4m
+contracts/governance/Admin.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                          [3mlinebreak-style[23m
+[1m  13:0  [22m   [33mwarning  [39m  Contract 'Admin' must be preceded by 2 blank lines.                    [3mblank-lines[23m
+[1m  34:47  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  45:28  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  56:28  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  58:13  [22m  [31merror  [39m    Alternate 'else' must begin on the same line as if's closing brace.    [3mlbrace[23m
+[4m
+contracts/governance/Agent.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                          [3mlinebreak-style[23m
+[1m  13:0  [22m   [33mwarning  [39m  Contract 'Agent' must be preceded by 2 blank lines.                    [3mblank-lines[23m
+[1m  33:48  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  44:28  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  55:23  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  57:13  [22m  [31merror  [39m    Alternate 'else' must begin on the same line as if's closing brace.    [3mlbrace[23m
+[4m
+contracts/governance/Groups.sol
+[24m[1m  1:0  [22m   [31merror  [39m    Inconsistent line-break style                           [3mlinebreak-style[23m
+[1m  13:0  [22m  [33mwarning  [39m  Contract 'Groups' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/governance/Multisignature.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  9:0  [22m     [33mwarning  [39m  Contract 'Multisignature' must be preceded by 2 blank lines.                                [3mblank-lines[23m
+[1m  34:30  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  57:60  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  83:21  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  106:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  114:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  117:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[4m
+contracts/governance/Priced.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                           [3mlinebreak-style[23m
+[1m  7:0  [22m  [33mwarning  [39m  Contract 'Priced' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/governance/Sudo.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                   [3mlinebreak-style[23m
+[1m  13:0  [22m   [33mwarning  [39m  Contract 'Sudo' must be preceded by 2 blank lines.              [3mblank-lines[23m
+[1m  32:28  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  44:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  57:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[4m
+contracts/governance/Trader.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                          [3mlinebreak-style[23m
+[1m  13:0  [22m   [33mwarning  [39m  Contract 'Trader' must be preceded by 2 blank lines.                   [3mblank-lines[23m
+[1m  33:49  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  44:28  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  55:23  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                 [3mlbrace[23m
+[1m  57:13  [22m  [31merror  [39m    Alternate 'else' must begin on the same line as if's closing brace.    [3mlbrace[23m
+[4m
+contracts/libs/AssetRank.sol
+[24m[1m  8:0  [22m    [31merror  [39m    Inconsistent line-break style                                                            [3mlinebreak-style[23m
+[1m  18:0  [22m   [33mwarning  [39m  Contract 'AssetRank' must be preceded by 2 blank lines.                                  [3mblank-lines[23m
+[1m  45:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                   [3mlbrace[23m
+[1m  59:96  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                             [3mlbrace[23m
+[1m  65:13  [22m  [31merror  [39m    Using 'l' for a variable name should be avoided.                                         [3mvariable-declarations[23m
+[1m  69:13  [22m  [33mwarning  [39m  Function "RankResult": in case of more than 3 arguments, drop each into its own line.    [3marg-overflow[23m
+[4m
+contracts/libs/AssetRankParameters.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  11:0  [22m    [33mwarning  [39m  Contract 'AssetRankParameters' must be preceded by 2 blank lines.                           [3mblank-lines[23m
+[1m  82:30  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  93:21  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  104:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  115:28  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  126:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  138:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  149:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  152:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  163:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  165:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[4m
+contracts/libs/ECVerify.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                                                                [3mlinebreak-style[23m
+[1m  6:0  [22m    [33mwarning  [39m  Contract 'ECVerify' must be preceded by 2 blank lines.                                                       [3mblank-lines[23m
+[1m  22:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                 [3mlbrace[23m
+[1m  23:15  [22m  [33mwarning  [39m  Function "ecrecover": in case of more than 3 arguments, drop each into its own line.                         [3marg-overflow[23m
+[1m  40:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                 [3mlbrace[23m
+[1m  43:15  [22m  [33mwarning  [39m  Function "ecrecover": in case of more than 3 arguments, drop each into its own line.                         [3marg-overflow[23m
+[1m  62:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                 [3mlbrace[23m
+[1m  72:23  [22m  [33mwarning  [39m  Function "getAddrFromSignature": in case of more than 3 arguments, drop each into its own line.              [3marg-overflow[23m
+[1m  74:22  [22m  [33mwarning  [39m  Function "getAddrFromSignatureWithPrefix": in case of more than 3 arguments, drop each into its own line.    [3marg-overflow[23m
+[4m
+contracts/libs/IndexedEntities.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                           [3mlinebreak-style[23m
+[1m  8:0  [22m     [33mwarning  [39m  Contract 'IndexedEntities' must be preceded by 2 blank lines.                           [3mblank-lines[23m
+[1m  66:44  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.                                  [3mlbrace[23m
+[1m  69:13  [22m   [33mwarning  [39m  Function "ItemAdded": in case of more than 3 arguments, drop each into its own line.    [3marg-overflow[23m
+[1m  84:29  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                            [3mlbrace[23m
+[1m  98:29  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                            [3mlbrace[23m
+[1m  112:26  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                            [3mlbrace[23m
+[4m
+contracts/libs/Modifiers.sol
+[24m[1m  1:0  [22m   [31merror  [39m    Inconsistent line-break style                                 [3mlinebreak-style[23m
+[1m  7:0  [22m   [33mwarning  [39m  Library 'UserModifiers' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  7:22  [22m  [33mwarning  [39m  Code contains empty block                                     [3mno-empty-blocks[23m
+[4m
+contracts/libs/Wallet.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                   [3mlinebreak-style[23m
+[1m  8:0  [22m    [33mwarning  [39m  Contract 'Wallet' must be preceded by 2 blank lines.            [3mblank-lines[23m
+[1m  18:19  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  29:44  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  41:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[4m
+contracts/libs/interfaces/IAssetRank.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                               [3mlinebreak-style[23m
+[1m  6:0  [22m  [33mwarning  [39m  Contract 'IAssetRank' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/libs/ownership/Ownable.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  8:0  [22m     [33mwarning  [39m  Contract 'Ownable' must be preceded by 2 blank lines.                                       [3mblank-lines[23m
+[1m  58:30  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  68:44  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  77:20  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  87:4  [22m    [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  89:44  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  99:4  [22m    [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  101:44  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[4m
+contracts/libs/rbac/RBACData.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                   [3mlinebreak-style[23m
+[1m  11:0  [22m    [33mwarning  [39m  Contract 'RBACData' must be preceded by 2 blank lines.          [3mblank-lines[23m
+[1m  32:17  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  46:27  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  57:44  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  72:44  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  87:30  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  101:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  112:44  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  127:44  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[4m
+contracts/libs/rbac/Roles.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                   [3mlinebreak-style[23m
+[1m  9:0  [22m    [33mwarning  [39m  Library 'Roles' must be preceded by 2 blank lines.              [3mblank-lines[23m
+[1m  13:8  [22m   [33mwarning  [39m  'verified_bearer' doesn't follow the mixedCase notation         [3mmixedcase[23m
+[1m  20:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  28:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  38:17  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  49:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  57:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  65:21  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  76:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[4m
+contracts/lifecycle/AssetBallot.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                   [3mlinebreak-style[23m
+[1m  10:0  [22m    [33mwarning  [39m  Contract 'AssetBallot' must be preceded by 2 blank lines.       [3mblank-lines[23m
+[1m  88:27  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  119:27  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  135:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  145:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  155:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  165:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[4m
+contracts/lifecycle/CyclicPausable.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  19:0  [22m    [33mwarning  [39m  Contract 'CyclicPausable' must be preceded by 2 blank lines.                                [3mblank-lines[23m
+[1m  83:30  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  84:27  [22m   [33mwarning  [39m  Avoid using 'block.timestamp'.                                                              [3msecurity/no-block-members[23m
+[1m  91:4  [22m    [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  96:27  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  104:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  109:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  110:16  [22m  [33mwarning  [39m  Avoid using 'block.timestamp'.                                                              [3msecurity/no-block-members[23m
+[1m  117:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  122:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  129:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  134:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[4m
+contracts/lifecycle/Pausable.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                             [3mlinebreak-style[23m
+[1m  10:0  [22m   [33mwarning  [39m  Contract 'Pausable' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  47:26  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.    [3mlbrace[23m
+[1m  58:23  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.    [3mlbrace[23m
+[4m
+contracts/lifecycle/TimePausable.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                   [3mlinebreak-style[23m
+[1m  10:0  [22m    [33mwarning  [39m  Contract 'TimePausable' must be preceded by 2 blank lines.      [3mblank-lines[23m
+[1m  76:27  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  77:17  [22m   [33mwarning  [39m  Avoid using 'block.timestamp'.                                  [3msecurity/no-block-members[23m
+[1m  86:28  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  96:28  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  106:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.    [3mlbrace[23m
+[1m  107:25  [22m  [33mwarning  [39m  Avoid using 'block.timestamp'.                                  [3msecurity/no-block-members[23m
+[1m  116:44  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.          [3mlbrace[23m
+[1m  118:20  [22m  [33mwarning  [39m  Avoid using 'block.timestamp'.                                  [3msecurity/no-block-members[23m
+[4m
+contracts/platform/Asset.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                                                            [3mlinebreak-style[23m
+[1m  26:0  [22m    [33mwarning  [39m  Contract 'Asset' must be preceded by 2 blank lines.                                                                      [3mblank-lines[23m
+[1m  61:4  [22m    [33mwarning  [39m  'PENDING_AGENT_DATA_APPROVAL' doesn't follow the mixedCase notation                                                      [3mmixedcase[23m
+[1m  62:4  [22m    [33mwarning  [39m  'PENDING_ADMIN_DATA_APPROVAL' doesn't follow the mixedCase notation                                                      [3mmixedcase[23m
+[1m  63:4  [22m    [33mwarning  [39m  'PENDING_AGENT_CONTRACT_APPROVAL' doesn't follow the mixedCase notation                                                  [3mmixedcase[23m
+[1m  64:4  [22m    [33mwarning  [39m  'LIVE' doesn't follow the mixedCase notation                                                                             [3mmixedcase[23m
+[1m  89:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  90:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  133:30  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                                                   [3mlbrace[23m
+[1m  152:43  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  163:42  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  178:73  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  190:97  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  235:10  [22m  [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  262:57  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  264:59  [22m  [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').                                                                          [3msecurity/no-block-members[23m
+[1m  265:8  [22m   [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  268:48  [22m  [31merror  [39m    'undefined': The first argument must not be preceded by any whitespace or comments (only '(').                           [3mfunction-whitespace[23m
+[1m  268:86  [22m  [31merror  [39m    'undefined': The last argument must not be succeeded by any whitespace or comments (only ')').                           [3mfunction-whitespace[23m
+[1m  269:46  [22m  [31merror  [39m    'undefined': The first argument must not be preceded by any whitespace or comments (only '(').                           [3mfunction-whitespace[23m
+[1m  269:82  [22m  [31merror  [39m    'undefined': The last argument must not be succeeded by any whitespace or comments (only ')').                           [3mfunction-whitespace[23m
+[1m  295:16  [22m  [31merror  [39m    'require': The first argument must not be preceded by any whitespace or comments (only '(').                             [3mfunction-whitespace[23m
+[1m  307:49  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  320:62  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  323:10  [22m  [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  340:86  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  344:10  [22m  [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  364:63  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  367:10  [22m  [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  374:29  [22m  [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').                                                                          [3msecurity/no-block-members[23m
+[1m  390:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                 [3mfunction-order[23m
+[1m  398:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                 [3mfunction-order[23m
+[1m  406:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                 [3mfunction-order[23m
+[1m  414:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                 [3mfunction-order[23m
+[1m  414:64  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                     [3mlbrace[23m
+[4m
+contracts/platform/BEE.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                                                                            [3mlinebreak-style[23m
+[1m  11:0  [22m   [33mwarning  [39m  Contract 'BEE' must be preceded by 2 blank lines.                                                                        [3mblank-lines[23m
+[1m  52:8  [22m   [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  53:8  [22m   [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  64:10  [22m  [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[4m
+contracts/platform/Claimer.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                            [3mlinebreak-style[23m
+[1m  12:0  [22m   [33mwarning  [39m  Contract 'Claimer' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  72:8  [22m   [33mwarning  [39m  Provide an error message for require().                  [3merror-reason[23m
+[1m  73:8  [22m   [33mwarning  [39m  Provide an error message for require().                  [3merror-reason[23m
+[1m  115:4  [22m  [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line    [3mblank-lines[23m
+[1m  135:8  [22m  [33mwarning  [39m  Provide an error message for require().                  [3merror-reason[23m
+[4m
+contracts/platform/Entity.sol
+[24m[1m  7:0  [22m   [31merror  [39m    Inconsistent line-break style                           [3mlinebreak-style[23m
+[1m  11:0  [22m  [33mwarning  [39m  Contract 'Entity' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  27:8  [22m  [33mwarning  [39m  Provide an error message for require().                 [3merror-reason[23m
+[4m
+contracts/platform/Fee.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                       [3mlinebreak-style[23m
+[1m  9:0  [22m    [33mwarning  [39m  Contract 'Fee' must be preceded by 2 blank lines.                   [3mblank-lines[23m
+[1m  30:8  [22m   [33mwarning  [39m  Provide an error message for require().                             [3merror-reason[23m
+[1m  31:8  [22m   [33mwarning  [39m  Provide an error message for require().                             [3merror-reason[23m
+[1m  32:8  [22m   [33mwarning  [39m  Provide an error message for require().                             [3merror-reason[23m
+[1m  42:36  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[1m  46:47  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[1m  50:44  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[4m
+contracts/platform/FeeManager.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  17:0  [22m   [33mwarning  [39m  Contract 'FeeManager' must be preceded by 2 blank lines.                                    [3mblank-lines[23m
+[1m  44:8  [22m   [33mwarning  [39m  Provide an error message for require().                                                     [3merror-reason[23m
+[1m  45:8  [22m   [33mwarning  [39m  Provide an error message for require().                                                     [3merror-reason[23m
+[1m  72:8  [22m   [33mwarning  [39m  Function "createFee": in case of more than 3 arguments, drop each into its own line.        [3marg-overflow[23m
+[1m  73:8  [22m   [33mwarning  [39m  Function "createFee": in case of more than 3 arguments, drop each into its own line.        [3marg-overflow[23m
+[1m  119:4  [22m  [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                             [3marg-overflow[23m
+[1m  134:4  [22m  [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  143:4  [22m  [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  151:4  [22m  [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[4m
+contracts/platform/Ranking.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  8:0  [22m    [33mwarning  [39m  Contract 'Ranking' must be preceded by 2 blank lines.                                       [3mblank-lines[23m
+[1m  19:8  [22m   [33mwarning  [39m  Provide an error message for require().                                                     [3merror-reason[23m
+[1m  38:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  50:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  52:96  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[4m
+contracts/platform/Registry.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                             [3mlinebreak-style[23m
+[1m  3:0  [22m  [33mwarning  [39m  Contract 'Registry' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/platform/Ticker.sol
+[24m[1m  4:0  [22m     [31merror  [39m    Inconsistent line-break style                            [3mlinebreak-style[23m
+[1m  10:0  [22m    [33mwarning  [39m  Contract 'Ticker' must be preceded by 2 blank lines.     [3mblank-lines[23m
+[1m  22:78  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').          [3msecurity/no-block-members[23m
+[1m  51:19  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').          [3msecurity/no-block-members[23m
+[1m  57:19  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').          [3msecurity/no-block-members[23m
+[1m  63:19  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').          [3msecurity/no-block-members[23m
+[1m  102:4  [22m   [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line    [3mblank-lines[23m
+[1m  121:4  [22m   [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line    [3mblank-lines[23m
+[1m  127:15  [22m  [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').          [3msecurity/no-block-members[23m
+[4m
+contracts/platform/TickerDecentralized.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                                                            [3mlinebreak-style[23m
+[1m  5:0  [22m     [33mwarning  [39m  Contract 'TickerDecentralized' must be preceded by 2 blank lines.                                                        [3mblank-lines[23m
+[1m  15:70  [22m   [33mwarning  [39m  Avoid using 'now' (alias to 'block.timestamp').                                                                          [3msecurity/no-block-members[23m
+[1m  58:45  [22m   [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  61:10  [22m   [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  123:4  [22m   [33mwarning  [39m  '__callback' doesn't follow the mixedCase notation                                                                       [3mmixedcase[23m
+[1m  124:8  [22m   [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  127:20  [22m  [33mwarning  [39m  Avoid using 'block.timestamp'.                                                                                           [3msecurity/no-block-members[23m
+[1m  129:10  [22m  [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  138:30  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[4m
+contracts/platform/interfaces/IAsset.sol
+[24m[1m  1:0  [22m   [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  3:0  [22m   [33mwarning  [39m  Contract 'IAsset' must be preceded by 2 blank lines.                                        [3mblank-lines[23m
+[1m  12:0  [22m  [33mwarning  [39m  Only use indent of 4 spaces.                                                                [3mindentation[23m
+[1m  28:4  [22m  [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  29:4  [22m  [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  30:4  [22m  [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[4m
+contracts/platform/interfaces/IAssetWhitelist.sol
+[24m[1m  1:0  [22m   [31merror  [39m    Inconsistent line-break style                                                   [3mlinebreak-style[23m
+[1m  3:0  [22m   [33mwarning  [39m  Contract 'IAssetWhitelist' must be preceded by 2 blank lines.                   [3mblank-lines[23m
+[1m  8:43  [22m  [31merror  [39m    All arguments (except the last one) must be immediately followed by a comma.    [3mfunction-whitespace[23m
+[4m
+contracts/platform/interfaces/IBEE.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                         [3mlinebreak-style[23m
+[1m  3:0  [22m  [33mwarning  [39m  Contract 'IBEE' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/platform/interfaces/IClaimer.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                             [3mlinebreak-style[23m
+[1m  3:0  [22m  [33mwarning  [39m  Contract 'IClaimer' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/platform/interfaces/IFee.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                         [3mlinebreak-style[23m
+[1m  5:0  [22m  [33mwarning  [39m  Contract 'IFee' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/platform/interfaces/IFeeManager.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                                [3mlinebreak-style[23m
+[1m  3:0  [22m  [33mwarning  [39m  Contract 'IFeeManager' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/platform/interfaces/ITicker.sol
+[24m[1m  1:0  [22m  [31merror  [39m    Inconsistent line-break style                            [3mlinebreak-style[23m
+[1m  3:0  [22m  [33mwarning  [39m  Contract 'ITicker' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[4m
+contracts/platform/kyc/DocsTracker.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                                   [3mlinebreak-style[23m
+[1m  9:0  [22m     [33mwarning  [39m  Contract 'DocsTracker' must be preceded by 2 blank lines.                                       [3mblank-lines[23m
+[1m  57:30  [22m   [31merror  [39m    Opening brace must be on the line after returns declaration.                                    [3mlbrace[23m
+[1m  58:16  [22m   [33mwarning  [39m  Function "validateSignature": in case of more than 3 arguments, drop each into its own line.    [3marg-overflow[23m
+[1m  78:44  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.                                          [3mlbrace[23m
+[1m  100:28  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                    [3mlbrace[23m
+[1m  124:16  [22m  [33mwarning  [39m  '_idx_r' doesn't follow the mixedCase notation                                                  [3mmixedcase[23m
+[1m  127:28  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                    [3mlbrace[23m
+[1m  146:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                    [3mlbrace[23m
+[4m
+contracts/portfolio/GenericPortfolio.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                     [3mlinebreak-style[23m
+[1m  8:0  [22m    [33mwarning  [39m  Contract 'GenericPortfolio' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  25:28  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.            [3mlbrace[23m
+[1m  36:29  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.      [3mlbrace[23m
+[1m  48:26  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.      [3mlbrace[23m
+[4m
+contracts/portfolio/Portfolio.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  10:0  [22m   [33mwarning  [39m  Contract 'Portfolio' must be preceded by 2 blank lines.                                     [3mblank-lines[23m
+[1m  35:26  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.                                      [3mlbrace[23m
+[1m  46:29  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  54:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  57:29  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[1m  64:4  [22m   [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  67:28  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                [3mlbrace[23m
+[4m
+contracts/token/Asset/AssetToken.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                               [3mlinebreak-style[23m
+[1m  5:0  [22m     [33mwarning  [39m  Contract 'AssetToken' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  80:27  [22m   [31merror  [39m    Opening brace must be on the line after last modifier.      [3mlbrace[23m
+[1m  110:27  [22m  [31merror  [39m    Opening brace must be on the line after last modifier.      [3mlbrace[23m
+[4m
+contracts/token/Asset/BaseAssetToken.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                                                            [3mlinebreak-style[23m
+[1m  9:0  [22m     [33mwarning  [39m  Contract 'BaseAssetToken' must be preceded by 2 blank lines.                                                             [3mblank-lines[23m
+[1m  15:8  [22m    [33mwarning  [39m  Provide an error message for revert().                                                                                   [3merror-reason[23m
+[1m  24:4  [22m    [33mwarning  [39m  Constant name 'decimals' doesn't follow the UPPER_CASE notation                                                          [3muppercase[23m
+[1m  25:4  [22m    [33mwarning  [39m  Constant name 'version' doesn't follow the UPPER_CASE notation                                                           [3muppercase[23m
+[1m  26:4  [22m    [33mwarning  [39m  Constant name 'provenance' doesn't follow the UPPER_CASE notation                                                        [3muppercase[23m
+[1m  67:4  [22m    [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                 [3mfunction-order[23m
+[1m  126:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                             [3mlbrace[23m
+[1m  143:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                             [3mlbrace[23m
+[1m  158:30  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                             [3mlbrace[23m
+[1m  171:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                             [3mlbrace[23m
+[1m  190:26  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                             [3mlbrace[23m
+[1m  201:40  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                             [3mlbrace[23m
+[1m  211:27  [22m  [31merror  [39m    Opening brace must be on the line after returns declaration.                                                             [3mlbrace[23m
+[1m  219:73  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  234:10  [22m  [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[4m
+contracts/token/Asset/IAssetToken.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                       [3mlinebreak-style[23m
+[1m  3:0  [22m    [33mwarning  [39m  Contract 'IAssetToken' must be preceded by 2 blank lines.           [3mblank-lines[23m
+[1m  22:44  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[1m  46:62  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[4m
+contracts/token/Platform/IPlatformToken.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                       [3mlinebreak-style[23m
+[1m  3:0  [22m    [33mwarning  [39m  Contract 'IPlatformToken' must be preceded by 2 blank lines.        [3mblank-lines[23m
+[1m  10:44  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[1m  34:62  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.    [3mvisibility-first[23m
+[4m
+contracts/token/Platform/PlatformToken.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                               [3mlinebreak-style[23m
+[1m  5:0  [22m     [33mwarning  [39m  Contract 'PlatformToken' must be preceded by 2 blank lines.                                 [3mblank-lines[23m
+[1m  5:0  [22m     [31merror  [39m    'PlatformToken': Declaration & opening brace must be separated by single space only.        [3mlbrace[23m
+[1m  9:8  [22m     [33mwarning  [39m  Provide an error message for revert().                                                      [3merror-reason[23m
+[1m  16:4  [22m    [33mwarning  [39m  Constant name 'decimals' doesn't follow the UPPER_CASE notation                             [3muppercase[23m
+[1m  17:4  [22m    [33mwarning  [39m  Constant name 'version' doesn't follow the UPPER_CASE notation                              [3muppercase[23m
+[1m  18:4  [22m    [33mwarning  [39m  Constant name 'provenance' doesn't follow the UPPER_CASE notation                           [3muppercase[23m
+[1m  31:4  [22m    [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private    [3mfunction-order[23m
+[1m  74:44  [22m   [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                            [3mvisibility-first[23m
+[1m  103:62  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                            [3mvisibility-first[23m
+[4m
+contracts/vendor/SafeMath.sol
+[24m[1m  1:0  [22m   [31merror  [39m    Inconsistent line-break style                            [3mlinebreak-style[23m
+[1m  7:0  [22m   [33mwarning  [39m  Library 'SafeMath' must be preceded by 2 blank lines.    [3mblank-lines[23m
+[1m  17:8  [22m  [33mwarning  [39m  Provide an error message for require().                  [3merror-reason[23m
+[1m  25:8  [22m  [33mwarning  [39m  Provide an error message for require().                  [3merror-reason[23m
+[1m  35:8  [22m  [33mwarning  [39m  Provide an error message for require().                  [3merror-reason[23m
+[1m  44:8  [22m  [33mwarning  [39m  Provide an error message for require().                  [3merror-reason[23m
+[4m
+contracts/vendor/usingOraclize.sol
+[24m[1m  32:0  [22m     [31merror  [39m    Inconsistent line-break style                                                                                               [3mlinebreak-style[23m
+[1m  34:0  [22m     [33mwarning  [39m  Contract 'OraclizeI' must be preceded by 2 blank lines.                                                                     [3mblank-lines[23m
+[1m  37:4  [22m     [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  37:4  [22m     [33mwarning  [39m  'query_withGasLimit' doesn't follow the mixedCase notation                                                                  [3mmixedcase[23m
+[1m  38:4  [22m     [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  39:4  [22m     [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                    [3mfunction-order[23m
+[1m  39:4  [22m     [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  39:4  [22m     [33mwarning  [39m  'query2_withGasLimit' doesn't follow the mixedCase notation                                                                 [3mmixedcase[23m
+[1m  39:4  [22m     [33mwarning  [39m  Line exceeds the limit of 145 characters                                                                                    [3mmax-len[23m
+[1m  41:4  [22m     [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                    [3mfunction-order[23m
+[1m  41:4  [22m     [33mwarning  [39m  'queryN_withGasLimit' doesn't follow the mixedCase notation                                                                 [3mmixedcase[23m
+[1m  41:4  [22m     [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  44:4  [22m     [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                    [3mfunction-order[23m
+[1m  45:4  [22m     [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                    [3mfunction-order[23m
+[1m  46:4  [22m     [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                    [3mfunction-order[23m
+[1m  46:4  [22m     [33mwarning  [39m  'randomDS_getSessionPubKeyHash' doesn't follow the mixedCase notation                                                       [3mmixedcase[23m
+[1m  48:0  [22m     [33mwarning  [39m  Contract 'OraclizeAddrResolverI' must be preceded by 2 blank lines.                                                         [3mblank-lines[23m
+[1m  51:0  [22m     [33mwarning  [39m  Contract 'usingOraclize' must be preceded by 2 blank lines.                                                                 [3mblank-lines[23m
+[1m  51:0  [22m     [33mwarning  [39m  Contract name 'usingOraclize' doesn't follow the CamelCase notation.                                                        [3mcamelcase[23m
+[1m  52:4  [22m     [33mwarning  [39m  Constant name 'day' doesn't follow the UPPER_CASE notation                                                                  [3muppercase[23m
+[1m  53:4  [22m     [33mwarning  [39m  Constant name 'week' doesn't follow the UPPER_CASE notation                                                                 [3muppercase[23m
+[1m  54:4  [22m     [33mwarning  [39m  Constant name 'month' doesn't follow the UPPER_CASE notation                                                                [3muppercase[23m
+[1m  55:4  [22m     [33mwarning  [39m  Constant name 'proofType_NONE' doesn't follow the UPPER_CASE notation                                                       [3muppercase[23m
+[1m  56:4  [22m     [33mwarning  [39m  Constant name 'proofType_TLSNotary' doesn't follow the UPPER_CASE notation                                                  [3muppercase[23m
+[1m  57:4  [22m     [33mwarning  [39m  Constant name 'proofType_Android' doesn't follow the UPPER_CASE notation                                                    [3muppercase[23m
+[1m  58:4  [22m     [33mwarning  [39m  Constant name 'proofType_Ledger' doesn't follow the UPPER_CASE notation                                                     [3muppercase[23m
+[1m  59:4  [22m     [33mwarning  [39m  Constant name 'proofType_Native' doesn't follow the UPPER_CASE notation                                                     [3muppercase[23m
+[1m  60:4  [22m     [33mwarning  [39m  Constant name 'proofStorage_IPFS' doesn't follow the UPPER_CASE notation                                                    [3muppercase[23m
+[1m  61:4  [22m     [33mwarning  [39m  Constant name 'networkID_auto' doesn't follow the UPPER_CASE notation                                                       [3muppercase[23m
+[1m  62:4  [22m     [33mwarning  [39m  Constant name 'networkID_mainnet' doesn't follow the UPPER_CASE notation                                                    [3muppercase[23m
+[1m  63:4  [22m     [33mwarning  [39m  Constant name 'networkID_testnet' doesn't follow the UPPER_CASE notation                                                    [3muppercase[23m
+[1m  64:4  [22m     [33mwarning  [39m  Constant name 'networkID_morden' doesn't follow the UPPER_CASE notation                                                     [3muppercase[23m
+[1m  65:4  [22m     [33mwarning  [39m  Constant name 'networkID_consensys' doesn't follow the UPPER_CASE notation                                                  [3muppercase[23m
+[1m  67:4  [22m     [33mwarning  [39m  'OAR' doesn't follow the mixedCase notation                                                                                 [3mmixedcase[23m
+[1m  71:10  [22m    [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.       [3mconditionals-whitespace[23m
+[1m  74:10  [22m    [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.       [3mconditionals-whitespace[23m
+[1m  84:4  [22m     [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  84:4  [22m     [33mwarning  [39m  'oraclize_setNetwork' doesn't follow the mixedCase notation                                                                 [3mmixedcase[23m
+[1m  84:72  [22m    [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  85:6  [22m     [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  86:6  [22m     [31merror  [39m    Code is unreachable.                                                                                                        [3msecurity/no-unreachable-code[23m
+[1m  86:6  [22m     [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  88:4  [22m     [33mwarning  [39m  'oraclize_setNetwork' doesn't follow the mixedCase notation                                                                 [3mmixedcase[23m
+[1m  88:57  [22m    [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  89:70  [22m    [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  94:70  [22m    [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  99:70  [22m    [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  104:70  [22m   [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  109:70  [22m   [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  113:70  [22m   [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  117:70  [22m   [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  124:4  [22m    [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                    [3mfunction-order[23m
+[1m  124:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  124:4  [22m    [33mwarning  [39m  '__callback' doesn't follow the mixedCase notation                                                                          [3mmixedcase[23m
+[1m  127:4  [22m    [33mwarning  [39m  '__callback' doesn't follow the mixedCase notation                                                                          [3mmixedcase[23m
+[1m  127:4  [22m    [33mwarning  [39m  Functions should be in order: constructor, fallback, external, public, internal, private                                    [3mfunction-order[23m
+[1m  128:6  [22m    [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  129:6  [22m    [31merror  [39m    Code is unreachable.                                                                                                        [3msecurity/no-unreachable-code[23m
+[1m  129:6  [22m    [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  129:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  129:20  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  132:4  [22m    [33mwarning  [39m  'oraclize_getPrice' doesn't follow the mixedCase notation                                                                   [3mmixedcase[23m
+[1m  132:62  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  132:85  [22m   [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  136:4  [22m    [33mwarning  [39m  'oraclize_getPrice' doesn't follow the mixedCase notation                                                                   [3mmixedcase[23m
+[1m  136:77  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  136:100  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  140:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  140:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  140:71  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  140:100  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  142:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  145:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  145:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  145:87  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  145:116  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  147:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  150:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  150:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  150:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  150:102  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  150:131  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  152:52  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  153:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  155:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  155:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  155:86  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  155:115  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  157:52  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  158:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  160:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  160:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  160:85  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  160:114  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  162:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  163:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  165:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  165:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  165:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  165:101  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  165:130  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  167:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  168:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  170:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  170:4  [22m    [33mwarning  [39m  Line exceeds the limit of 145 characters                                                                                    [3mmax-len[23m
+[1m  170:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  170:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  170:116  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  170:145  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  172:52  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  173:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  175:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  175:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  175:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  175:100  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  175:129  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  177:52  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  178:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  180:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  180:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  180:74  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  180:103  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  182:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  186:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  186:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  186:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  186:119  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  188:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  192:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  192:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  192:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  192:105  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  192:134  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  194:52  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  196:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  198:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  198:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  198:89  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  198:118  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  200:52  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  202:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  204:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  204:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  204:75  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  209:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  209:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  209:91  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  214:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  214:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  214:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  214:106  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  217:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  219:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  219:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  225:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  225:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  225:75  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  231:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  231:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  231:91  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  237:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  237:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  237:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  237:106  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  241:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  243:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  243:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  243:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  249:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  249:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  249:75  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  256:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  256:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  256:91  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  263:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  263:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  263:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  263:106  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  268:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  270:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  270:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  278:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  278:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  278:75  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  286:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  286:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  286:91  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  294:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  294:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  294:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  294:106  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  300:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  302:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  302:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  302:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  310:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  310:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  310:75  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  319:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  319:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  319:91  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  328:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  328:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  328:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  328:106  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  335:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  337:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  337:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  337:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  346:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  346:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  346:73  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  346:102  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  348:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  352:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  352:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  352:89  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  352:118  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  354:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  358:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  358:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  358:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  358:104  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  358:133  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  360:52  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  362:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  364:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  364:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  364:88  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  364:117  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  366:52  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  368:15  [22m   [33mwarning  [39m  Function "undefined": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  370:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  370:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  370:74  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  375:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  375:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  375:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  380:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  380:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  380:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  380:105  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  383:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  385:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  385:89  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  391:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  391:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  391:74  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  397:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  397:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  397:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  403:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  403:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  403:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  403:105  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  407:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  409:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  409:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  409:89  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  415:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  415:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  415:74  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  422:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  422:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  422:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  429:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  429:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  429:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  429:105  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  434:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  436:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  436:89  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  444:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  444:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  444:74  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  452:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  452:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  452:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  460:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  460:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  460:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  460:105  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  466:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  468:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  468:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  468:89  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  476:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  476:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  476:74  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  485:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  485:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  485:90  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  494:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  494:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  494:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  494:105  [22m  [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  501:15  [22m   [33mwarning  [39m  Function "oraclize_query": in case of more than 3 arguments, drop each into its own line.                                   [3marg-overflow[23m
+[1m  503:4  [22m    [33mwarning  [39m  'oraclize_query' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  503:89  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  513:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  513:4  [22m    [33mwarning  [39m  'oraclize_cbAddress' doesn't follow the mixedCase notation                                                                  [3mmixedcase[23m
+[1m  513:46  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  513:72  [22m   [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  516:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  516:4  [22m    [33mwarning  [39m  'oraclize_setProof' doesn't follow the mixedCase notation                                                                   [3mmixedcase[23m
+[1m  516:56  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  519:4  [22m    [33mwarning  [39m  'oraclize_setCustomGasPrice' doesn't follow the mixedCase notation                                                          [3mmixedcase[23m
+[1m  519:67  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  523:4  [22m    [33mwarning  [39m  'oraclize_randomDS_getSessionPubKeyHash' doesn't follow the mixedCase notation                                              [3mmixedcase[23m
+[1m  523:66  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  523:92  [22m   [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  527:45  [22m   [33mwarning  [39m  Visibility modifier "internal" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  528:8  [22m    [31merror  [39m    Avoid using Inline Assembly.                                                                                                [3msecurity/no-inline-assembly[23m
+[1m  533:65  [22m   [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  538:13  [22m   [31merror  [39m    Assignment operator must have exactly single space on both sides of it.                                                     [3moperator-whitespace[23m
+[1m  538:33  [22m   [31merror  [39m    Assignment operator must have exactly single space on both sides of it.                                                     [3moperator-whitespace[23m
+[1m  538:38  [22m   [31merror  [39m    Only use single space between for statement & opening brace.                                                                [3mlbrace[23m
+[1m  542:41  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  543:45  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  544:45  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  545:41  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  546:45  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  547:45  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  557:34  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  558:8  [22m    [31merror  [39m    Expected '{' after for statement.                                                                                           [3mlbrace[23m
+[1m  562:0  [22m    [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  574:10  [22m   [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.       [3mconditionals-whitespace[23m
+[1m  576:15  [22m   [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.       [3mconditionals-whitespace[23m
+[1m  576:34  [22m   [31merror  [39m    Single space should be either on both sides of '-' or not at all.                                                           [3moperator-whitespace[23m
+[1m  579:8  [22m    [31merror  [39m    Only use single space between 'else' and opening brace.                                                                     [3mlbrace[23m
+[1m  582:12  [22m   [31merror  [39m    Opening brace must be on the same line as the for statement.                                                                [3mlbrace[23m
+[1m  584:16  [22m   [31merror  [39m    Opening brace must be on the same line as the 'if' token.                                                                   [3mlbrace[23m
+[1m  586:25  [22m   [31merror  [39m    There should be exactly a single space between the 'while' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  587:20  [22m   [31merror  [39m    Opening brace must be on the same line as the while statement.                                                              [3mlbrace[23m
+[1m  590:22  [22m   [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.       [3mconditionals-whitespace[23m
+[1m  598:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  607:8  [22m    [31merror  [39m    Expected '{' after for statement.                                                                                           [3mlbrace[23m
+[1m  608:8  [22m    [31merror  [39m    Expected '{' after for statement.                                                                                           [3mlbrace[23m
+[1m  609:8  [22m    [31merror  [39m    Expected '{' after for statement.                                                                                           [3mlbrace[23m
+[1m  610:8  [22m    [31merror  [39m    Expected '{' after for statement.                                                                                           [3mlbrace[23m
+[1m  611:8  [22m    [31merror  [39m    Expected '{' after for statement.                                                                                           [3mlbrace[23m
+[1m  615:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  616:15  [22m   [33mwarning  [39m  Function "strConcat": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  620:15  [22m   [33mwarning  [39m  Function "strConcat": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  624:15  [22m   [33mwarning  [39m  Function "strConcat": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  633:4  [22m    [31merror  [39m    "parseInt": Avoid assigning to function parameters.                                                                         [3msecurity/no-assign-params[23m
+[1m  637:13  [22m   [31merror  [39m    Assignment operator must have exactly single space on both sides of it.                                                     [3moperator-whitespace[23m
+[1m  637:45  [22m   [31merror  [39m    Only use single space between for statement & opening brace.                                                                [3mlbrace[23m
+[1m  638:55  [22m   [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  639:29  [22m   [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  640:19  [22m   [33mwarning  [39m  Only use indent of 20 spaces.                                                                                               [3mindentation[23m
+[1m  640:32  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  641:25  [22m   [31merror  [39m    Alternate clause should exist on line after 'else'.                                                                         [3mlbrace[23m
+[1m  645:41  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  647:20  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  651:4  [22m    [31merror  [39m    "uint2str": Avoid assigning to function parameters.                                                                         [3msecurity/no-assign-params[23m
+[1m  651:60  [22m   [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  652:20  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  655:22  [22m   [31merror  [39m    Only use single space between while declaration & opening brace.                                                            [3mlbrace[23m
+[1m  661:22  [22m   [31merror  [39m    Only use single space between while declaration & opening brace.                                                            [3mlbrace[23m
+[1m  669:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  672:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  673:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  674:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  678:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  679:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  680:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  681:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  683:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  687:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  707:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  708:0  [22m    [33mwarning  [39m  Only use indent of 4 spaces.                                                                                                [3mindentation[23m
+[1m  710:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                       [3mblank-lines[23m
+[1m  711:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  714:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  715:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  716:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  720:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  721:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  722:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  723:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  725:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  729:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  749:12  [22m   [33mwarning  [39m  Only use indent of 8 spaces.                                                                                                [3mindentation[23m
+[1m  750:0  [22m    [33mwarning  [39m  Only use indent of 4 spaces.                                                                                                [3mindentation[23m
+[1m  753:4  [22m    [33mwarning  [39m  'oraclize_network_name' doesn't follow the mixedCase notation                                                               [3mmixedcase[23m
+[1m  754:4  [22m    [33mwarning  [39m  'oraclize_setNetworkName' doesn't follow the mixedCase notation                                                             [3mmixedcase[23m
+[1m  754:37  [22m   [33mwarning  [39m  '_network_name' doesn't follow the mixedCase notation                                                                       [3mmixedcase[23m
+[1m  758:4  [22m    [33mwarning  [39m  'oraclize_getNetworkName' doesn't follow the mixedCase notation                                                             [3mmixedcase[23m
+[1m  762:4  [22m    [33mwarning  [39m  'oraclize_newRandomDSQuery' doesn't follow the mixedCase notation                                                           [3mmixedcase[23m
+[1m  762:4  [22m    [31merror  [39m    "oraclize_newRandomDSQuery": Avoid assigning to function parameters.                                                        [3msecurity/no-assign-params[23m
+[1m  762:114  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  763:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                     [3merror-reason[23m
+[1m  770:8  [22m    [33mwarning  [39m  'sessionKeyHash_bytes32' doesn't follow the mixedCase notation                                                              [3mmixedcase[23m
+[1m  771:8  [22m    [31merror  [39m    Avoid using Inline Assembly.                                                                                                [3msecurity/no-inline-assembly[23m
+[1m  778:8  [22m    [31merror  [39m    Avoid using Inline Assembly.                                                                                                [3msecurity/no-inline-assembly[23m
+[1m  782:8  [22m    [33mwarning  [39m  'delay_bytes8' doesn't follow the mixedCase notation                                                                        [3mmixedcase[23m
+[1m  783:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  785:31  [22m   [33mwarning  [39m  In case of more than 3 elements, array expression needs to be spread over multiple lines with 1 element per line.           [3marg-overflow[23m
+[1m  788:8  [22m    [33mwarning  [39m  'delay_bytes8_left' doesn't follow the mixedCase notation                                                                   [3mmixedcase[23m
+[1m  790:8  [22m    [31merror  [39m    Avoid using Inline Assembly.                                                                                                [3msecurity/no-inline-assembly[23m
+[1m  803:49  [22m   [33mwarning  [39m  Function "keccak256": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  807:4  [22m    [33mwarning  [39m  'oraclize_randomDS_setCommitment' doesn't follow the mixedCase notation                                                     [3mmixedcase[23m
+[1m  811:4  [22m    [33mwarning  [39m  'oraclize_randomDS_args' doesn't follow the mixedCase notation                                                              [3mmixedcase[23m
+[1m  812:4  [22m    [33mwarning  [39m  'oraclize_randomDS_sessionKeysHashVerified' doesn't follow the mixedCase notation                                           [3mmixedcase[23m
+[1m  814:91  [22m   [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  823:16  [22m   [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  826:16  [22m   [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  828:8  [22m    [31merror  [39m    Avoid using Inline Assembly.                                                                                                [3msecurity/no-inline-assembly[23m
+[1m  834:26  [22m   [33mwarning  [39m  Function "safer_ecrecover": in case of more than 3 arguments, drop each into its own line.                                  [3marg-overflow[23m
+[1m  835:50  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  837:30  [22m   [33mwarning  [39m  Function "safer_ecrecover": in case of more than 3 arguments, drop each into its own line.                                  [3marg-overflow[23m
+[1m  842:4  [22m    [33mwarning  [39m  'oraclize_randomDS_proofVerify__sessionKeyValidity' doesn't follow the mixedCase notation                                   [3mmixedcase[23m
+[1m  847:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  849:8  [22m    [33mwarning  [39m  'appkey1_pubkey' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  850:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  854:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  855:8  [22m    [33mwarning  [39m  'CODEHASH' doesn't follow the mixedCase notation                                                                            [3mmixedcase[23m
+[1m  856:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  859:28  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  863:8  [22m    [33mwarning  [39m  'LEDGERKEY' doesn't follow the mixedCase notation                                                                           [3mmixedcase[23m
+[1m  863:8  [22m    [33mwarning  [39m  Line exceeds the limit of 145 characters                                                                                    [3mmax-len[23m
+[1m  867:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  870:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  877:4  [22m    [33mwarning  [39m  'oraclize_randomDS_proofVerify' doesn't follow the mixedCase notation                                                       [3mmixedcase[23m
+[1m  879:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                     [3merror-reason[23m
+[1m  881:29  [22m   [33mwarning  [39m  Function "oraclize_randomDS_proofVerify__main": in case of more than 3 arguments, drop each into its own line.              [3marg-overflow[23m
+[1m  882:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                     [3merror-reason[23m
+[1m  887:4  [22m    [33mwarning  [39m  'oraclize_randomDS_proofVerify__returnCode' doesn't follow the mixedCase notation                                           [3mmixedcase[23m
+[1m  887:127  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  889:70  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  891:29  [22m   [33mwarning  [39m  Function "oraclize_randomDS_proofVerify__main": in case of more than 3 arguments, drop each into its own line.              [3marg-overflow[23m
+[1m  892:36  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  897:63  [22m   [33mwarning  [39m  'n_random_bytes' doesn't follow the mixedCase notation                                                                      [3mmixedcase[23m
+[1m  897:112  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  900:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                     [3merror-reason[23m
+[1m  902:13  [22m   [31merror  [39m    Assignment operator must have exactly single space on both sides of it.                                                     [3moperator-whitespace[23m
+[1m  902:27  [22m   [31merror  [39m    Single space should be either on both sides of '<' or not at all.                                                           [3moperator-whitespace[23m
+[1m  903:41  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  909:4  [22m    [33mwarning  [39m  'oraclize_randomDS_proofVerify__main' doesn't follow the mixedCase notation                                                 [3mmixedcase[23m
+[1m  909:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  909:93  [22m   [33mwarning  [39m  'context_name' doesn't follow the mixedCase notation                                                                        [3mmixedcase[23m
+[1m  909:137  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                        [3mlbrace[23m
+[1m  914:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  915:79  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  918:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  921:92  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  926:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  930:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  933:94  [22m   [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  935:15  [22m   [31merror  [39m    Alternate clause should exist on line after 'else'.                                                                         [3mlbrace[23m
+[1m  940:8  [22m    [33mwarning  [39m  Function "copyBytes": in case of more than 3 arguments, drop each into its own line.                                        [3marg-overflow[23m
+[1m  941:62  [22m   [31merror  [39m    Consequent should exist exactly on the line after condition.                                                                [3mlbrace[23m
+[1m  944:82  [22m   [31merror  [39m    Only use single space between condition and opening brace.                                                                  [3mlbrace[23m
+[1m  952:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  956:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                     [3merror-reason[23m
+[1m  963:12  [22m   [31merror  [39m    Avoid using Inline Assembly.                                                                                                [3msecurity/no-inline-assembly[23m
+[1m  976:4  [22m    [33mwarning  [39m  'safer_ecrecover' doesn't follow the mixedCase notation                                                                     [3mmixedcase[23m
+[1m  976:4  [22m    [33mwarning  [39m  In case of more than 3 parameters, drop each into its own line.                                                             [3marg-overflow[23m
+[1m  987:8  [22m    [31merror  [39m    Avoid using Inline Assembly.                                                                                                [3msecurity/no-inline-assembly[23m
+[1m  1015:8  [22m   [31merror  [39m    Avoid using Inline Assembly.                                                                                                [3msecurity/no-inline-assembly[23m
+[1m  1041:15  [22m  [33mwarning  [39m  Function "safer_ecrecover": in case of more than 3 arguments, drop each into its own line.                                  [3marg-overflow[23m
+[4m
+contracts/whitelist/AssetWhitelist.sol
+[24m[1m  1:0  [22m     [31merror  [39m    Inconsistent line-break style                                                                                            [3mlinebreak-style[23m
+[1m  8:0  [22m     [33mwarning  [39m  Contract 'AssetWhitelist' must be preceded by 2 blank lines.                                                             [3mblank-lines[23m
+[1m  26:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  27:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  28:8  [22m    [33mwarning  [39m  Provide an error message for require().                                                                                  [3merror-reason[23m
+[1m  42:53  [22m   [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  51:56  [22m   [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  69:4  [22m    [33mwarning  [39m  FunctionDeclaration must be succeeded by 1 blank line                                                                    [3mblank-lines[23m
+[1m  69:43  [22m   [31merror  [39m    All arguments (except the last one) must be immediately followed by a comma.                                             [3mfunction-whitespace[23m
+[1m  70:10  [22m   [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  75:10  [22m   [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  80:10  [22m   [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  85:10  [22m   [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  97:50  [22m   [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  101:68  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  105:60  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  109:68  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                         [3mvisibility-first[23m
+[1m  121:59  [22m  [31merror  [39m    Opening brace must be preceded by single space only.                                                                     [3mlbrace[23m
+[4m
+contracts/whitelist/Whitelist.sol
+[24m[1m  1:0  [22m    [31merror  [39m    Inconsistent line-break style                                                                                             [3mlinebreak-style[23m
+[1m  5:0  [22m    [33mwarning  [39m  Contract 'Whitelist' must be preceded by 2 blank lines.                                                                   [3mblank-lines[23m
+[1m  17:64  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  26:67  [22m  [33mwarning  [39m  Visibility modifier "public" should come before other modifiers.                                                          [3mvisibility-first[23m
+[1m  36:11  [22m  [31merror  [39m    There should be exactly a single space between the 'for' token and the parenthetic block representing the conditional.    [3mconditionals-whitespace[23m
+[1m  37:14  [22m  [31merror  [39m    There should be exactly a single space between the 'if' token and the parenthetic block representing the conditional.     [3mconditionals-whitespace[23m
+
+[31m✖ [39m[31m318 errors[39m[31m, 533 warnings[39m[31m found.
+
+[39m

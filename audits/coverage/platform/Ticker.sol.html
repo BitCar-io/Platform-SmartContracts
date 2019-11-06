@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for platform/Ticker.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">platform/</a> Ticker.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>19/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.17% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/24</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">55×</span>
+<span class="cline-any cline-yes">55×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">50×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// TODO: - Check uint256 overflow/underflow (implement safemath)
+//       - Have checks around numbers smaller than 0.9 as they will return 0
+&nbsp;
+pragma solidity ^0.4.24;
+&nbsp;
+import "./interfaces/ITicker.sol";
+&nbsp;
+import "../vendor/SafeMath.sol";
+&nbsp;
+contract Ticker is ITicker {
+&nbsp;
+    using SafeMath for uint256;
+&nbsp;
+    address owner;
+    
+    modifier onlyOwner() {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(msg.sender == owner, "Only the owner can perform this function");
+        _;
+    }
+&nbsp;
+    modifier isValidTicker(uint256 _ticker, uint256 _tickerEpoch) {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_ticker &gt; 0 &amp;&amp; _tickerEpoch &gt; 0 &amp;&amp; _tickerEpoch + minEpoch &gt;= now, "Invalid ticker");
+        _;
+    }
+&nbsp;
+    string private name;
+&nbsp;
+    uint256 private usd; // ticker usd price
+    uint256 private usdEpoch; // ticker last updated time
+&nbsp;
+    uint256 private btc; // ticker btc price
+    uint256 private btcEpoch; // ticker last updated time
+&nbsp;
+    uint256 private eth; // ticker eth price
+    uint256 private ethEpoch; // ticker last updated time
+    
+    uint256 private decimals = 8;
+    uint256 private minEpoch; // min epoch that is considered valid
+&nbsp;
+    event RateChange(string currency, uint256 value);
+    
+    constructor(string _name, uint256 _minEpochMinutes) public {
+        <span class="missing-if-branch" title="else path not taken" >E</span>require(_minEpochMinutes &gt; 0, "Min Epoch must be greater than 0");
+        owner = msg.sender;
+        name = _name;
+        minEpoch = _minEpochMinutes * 60;
+    }
+    
+    function setUSD(uint256 _usd) public onlyOwner {
+        usd = _usd;
+        usdEpoch = now;
+        emit RateChange("USD", _usd);
+    }
+    
+<span class="fstat-no" title="function not covered" >    function setBTC(uint256 _btc) public onlyOwne</span>r {
+<span class="cstat-no" title="statement not covered" >        btc = _btc</span>;
+<span class="cstat-no" title="statement not covered" >        btcEpoch = now</span>;
+<span class="cstat-no" title="statement not covered" >        emit RateChange("BTC", _btc);</span>
+    }
+    
+    function setETH(uint256 _eth) public onlyOwner {
+        eth = _eth;
+        ethEpoch = now;
+        emit RateChange("ETH", _eth);
+    }
+&nbsp;
+    function getUSD() public view isValidTicker(usd, usdEpoch) returns (uint256) { return usd; }
+    function getETH() public view isValidTicker(eth, ethEpoch) returns (uint256) { return eth; }
+<span class="fstat-no" title="function not covered" >    function getBTC() public view isValidTicker(btc, btcEpoch) returns (uint256</span>) { <span class="cstat-no" title="statement not covered" >return btc;</span> }
+    
+/**
+     * @notice Converts units into the smallest unit
+     * @return The units in the smallest denomination possible
+     */
+    function unitsToBase(uint256 _units) public view returns(uint256) {
+        return _units.mul(10 ** decimals);
+    }
+    
+    /**
+     * @notice Converts units from the smallest denomination possible into the
+     * base unit
+     * @return Units converted to base unit
+     */
+    function baseToUnits(uint256 _units) public view returns (uint256) {
+        return _units.div(10 ** decimals);
+    }
+&nbsp;
+    /**
+     * @notice Converts units to USD
+     * @dev TODO: Remove, method added to ensure backwards compatibility
+     * @return Converted units in USD
+     */
+    function unitsToUSD(uint256 _units) public view returns (uint256) {
+        return baseToUnits(_units.mul(getUSD()));
+    }
+    
+    /**
+     * @notice Converts USD to units
+     * @dev TODO: Remove, method added to ensure backwards compatibility
+     * @return Converted USD to units
+     */
+    function usdToUnits(uint256 _usd) public view returns (uint256) {
+        return unitsToBase(_usd).div(getUSD());
+    }
+&nbsp;
+&nbsp;
+    /**
+     * @notice Converts units to USD
+     * @dev TODO: Remove, method added to ensure backwards compatibility
+     * @return Converted units in USD
+     */
+<span class="fstat-no" title="function not covered" >    function unitsToETH(uint256 _units) public view returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return baseToUnits(_units.mul(getETH()));</span>
+    }
+    
+    /**
+     * @notice Converts USD to units
+     * @dev TODO: Remove, method added to ensure backwards compatibility
+     * @return Converted USD to units
+     */
+    function ethToUnits(uint256 _eth) public view returns (uint256) {
+        return unitsToBase(_eth).div(getETH());
+    }
+&nbsp;
+    
+<span class="fstat-no" title="function not covered" >    function test() public view returns (uint256</span>) {
+<span class="cstat-no" title="statement not covered" >        return now;</span>
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 30 2019 11:54:08 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
